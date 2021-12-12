@@ -1,0 +1,48 @@
+<div class="sidebar" id="sidebar">
+				<div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+
+							<li class="active">
+								<a href="{% url 'index' %}"><i data-feather="home"></i> <span>Home</span></a>
+							</li>
+							<li>
+								<a href="{% url 'executives' %}"><i data-feather="users"></i> <span>Executives</span></a>
+							</li>
+							<li>
+								<a href="{% url 'students' %}"><i data-feather="users"></i> <span>Students</span></a>
+							</li>
+							<li>
+								<a href="{% url 'lessons' %}"><i data-feather="book-open"></i> <span>Eduction Programs</span></a>
+							</li>
+
+							<li class="submenu">
+								<a href="{% url 'support-programs' %}"><i data-feather="package"></i> <span> Support Programs</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'support-programs' %}">aile</a></li>
+									<li><a href="{% url 'support-programs' %}">yurt ogrenci</a></li>
+									<li><a href="{% url 'support-programs' %}">yurtsuz</a></li>
+								</ul>
+							</li>
+                            <li class="submenu">
+								<a href="{% url 'activities' %}"><i data-feather="activity"></i> <span> Activities</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'activities' %}">Past Activities </a></li>
+									<li><a href="{% url 'activities' %}">Upcoming Activities</a></li>
+
+								</ul>
+							</li>
+							<li class="menu-title">
+								<span>Kulder</span>
+							</li>
+							<li>
+								<a href="{% url 'aboutus' %}"><i data-feather="info"></i> <span>AboutUs</span></a>
+							</li>
+                            <li>
+								<a href="{% url 'contactus' %}"><i data-feather="message-square"></i> <span>ContactUs</span></a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>

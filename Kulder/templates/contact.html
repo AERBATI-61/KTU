@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="page-wrapper" style="min-height: 937px;">
+        <div class="content container-fluid">
+
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+										<span class="dash-widget-icon bg-1">
+											<i class="fas fa-school"></i>
+										</span>
+                                    <div class="dash-count">
+                                        <div class="dash-title">Kulder</div>
+                                        <div class="dash-counts">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm mt-3">
+                                    <div class="progress-bar bg-5" role="progressbar" style="width: 100%"
+                                         aria-valuenow="75"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-muted mt-3 mb-0"><span class="text-danger mr-1"><i
+                                        class="fas fa-arrow-up mr-1"></i>Dikkat</span>7/24 Hizmetinizdeyiz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+										<span class="dash-widget-icon bg-2">
+											<i class="fas fa-phone"></i>
+										</span>
+                                    <div class="dash-count">
+                                        <div class="dash-title">5380514510</div>
+                                        <div class="dash-counts">
+                                            <p>5380514510</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm mt-3">
+                                    <div class="progress-bar bg-6" role="progressbar" style="width: 100%"
+                                         aria-valuenow="75"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i
+                                        class="fas fa-arrow-up mr-1"></i>iletisim </span> 7/24</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+										<span class="dash-widget-icon bg-3">
+											<i class="fas fa-envelope-open"></i>
+										</span>
+                                    <div class="dash-count">
+                                        <div class="dash-title">Email</div>
+                                        <div class="dash-counts">
+                                            <p>jasurboy52@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm mt-3">
+                                    <div class="progress-bar bg-7" role="progressbar" style="width: 100%"
+                                         aria-valuenow="75"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i
+                                        class="fas fa-arrow-up mr-1"></i>iletisim</span> 7/24</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+										<span class="dash-widget-icon bg-4">
+											<i class="fas fa-map-marker-alt"></i>
+										</span>
+                                    <div class="dash-count">
+                                        <div class="dash-title">Adress</div>
+                                        <div class="dash-counts">
+                                            <p>Kulder/Trabzon</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm mt-3">
+                                    <div class="progress-bar bg-8" role="progressbar" style="width: 100%"
+                                         aria-valuenow="75"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-muted mt-3 mb-0"><span class="text-danger mr-1"><i
+                                        class="fas fa-arrow-up mr-1"></i>Ulasim</span>7/24</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Kayit olusturun</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    {% csrf_token %}
+
+                                    <label>First Name</label>
+                                    <input type="text" class="form-control" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control" name="surname" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Telephone</label>
+                                    <input type="number" class="form-control" name="tel">
+                                </div>
+                                <div class="form-group">
+                                    <label>subject</label>
+                                    <input type="text" class="form-control" name="subject">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="description" type="text" id="" cols="85" rows="5"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-rounded btn-success">Gonder</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="col-lg-5">
+                            <div class="card bg-white">
+                                <div class="card-header">
+                                    <h5 class="card-title">Kulder/Trabzon</h5>
+                                </div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96367.28079151725!2d39.66122003400994!3d40.99292025436568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40643c066bf2ec89%3A0xc4390aca748c2b71!2sTrabzon%2C%20Ortahisar%2FTrabzon!5e0!3m2!1str!2str!4v1636027083931!5m2!1str!2str"
+                                        width="700" height="680" style="border:0;" allowfullscreen=""
+                                        loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <div class="main-wrapper">
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h3 class="page-title">KTU</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'home' %}">KULDER</a>
+                                </li>
+                                <li class="breadcrumb-item active">Students</li>
+                            </ul>
+                        </div>
+                        <div style="margin: 50px">
+                            <a href="{% url 'export-csv' %}" class="btn btn-warning" style="margin: 10px">CSV</a>
+                            <a href="{% url 'export-excel' %}" class="btn btn-warning" style="margin: 10px">Excel</a>
+                            <a href="{% url 'venue-pdf'%}" class="btn btn-primary" style="margin: 10px">PDF</a>
+                        </div>
+                        <div class="top-nav-search">
+                            <form>
+                                {% csrf_token %}
+                                <input type="text" name="keyword" class="form-control" placeholder="Search here">
+                                <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- /Page Header -->
+
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+
+
+
+                        <div class="card card-table">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover datatable">
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Student Id</th>
+                                            <th>Email</th>
+                                            <th>Nationality</th>
+                                            <th>Department</th>
+                                            <th>Level of Education</th>
+                                            <th>More</th>
+{#                                            <th>PDF</th>#}
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% if students %}
+                                            {% for student in students %}
+                                                <tr>
+
+                                                    {% if student.profile_pic %}
+                                                        <td>
+                                                            <h2 class="table-avatar">
+                                                                <a href="{% url 'student-detail' student.slug %}"
+                                                                   class="avatar avatar-sm mr-2"><img
+                                                                        class="avatar-img rounded-circle"
+                                                                        src="{{ student.profile_pic.url }}"
+                                                                        alt="User Image"></a>
+                                                                <a href="#">{{ student.name }}
+                                                                    <span>{{ student.gender }}</span></a>
+                                                            </h2>
+                                                        </td>
+
+
+                                                    {% else %}
+                                                        {% if student.gender == "Male" %}
+
+                                                            <td>
+                                                                <h2 class="table-avatar">
+                                                                    <a href="{% url 'student-detail' student.slug %}"
+                                                                       class="avatar avatar-sm mr-2"><img
+                                                                            class="avatar-img rounded-circle"
+                                                                            src="{% static 'assets/img/profiles/avatar-02.jpg' %}"
+                                                                            alt="User Image"></a>
+                                                                    <a href="#">{{ student.name }}
+                                                                        <span>{{ student.gender }}</span></a>
+                                                                </h2>
+                                                            </td>
+                                                        {% else %}
+                                                            <td>
+                                                                <h2 class="table-avatar">
+                                                                    <a href="{% url 'student-detail' student.slug %}"
+                                                                       class="avatar avatar-sm mr-2"><img
+                                                                            class="avatar-img rounded-circle"
+                                                                            src="{% static 'assets/img/profiles/avatar-04.jpg' %}"
+                                                                            alt="User Image"></a>
+                                                                    <a href="#">{{ student.name }}
+                                                                        <span>{{ student.gender }}</span></a>
+                                                                </h2>
+                                                            </td>
+
+
+                                                        {% endif %}
+
+
+                                                    {% endif %}
+
+
+
+
+
+                                                    <td>{{ student.studentID }}</td>
+
+                                                    <td>{{ student.email }}</td>
+                                                    <td>{{ student.nationality.name }}</td>
+                                                    <td>{{ student.department }}</td>
+                                                    <td>{{ student.degree_level }}</td>
+                                                    <td class="text-right">
+                                                        <a href="{% url 'student-detail' student.slug %}"
+                                                           class="btn btn-sm btn-white text-success mr-2"><i
+                                                                class="far fa-eye mr-1"></i> Detail</a>
+
+
+                                                    </td>
+
+
+{#                                                    <td>#}
+{#                                                        <a href="{{ student.pk }}">PDF</a>#}
+{#                                                    </td>#}
+
+
+                                                </tr>
+
+                                            {% endfor %}
+
+
+
+                                        {% endif %}
+
+
+                                        </tbody>
+
+                                    </table>
+                                    <div class="row">
+
+
+                                        <div class="col-sm-12 col-md-5">
+                                            <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
+                                                 aria-live="polite">Showing 1 to 10 of Students list
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="dataTables_paginate paging_simple_numbers"
+                                                 id="DataTables_Table_0_paginate">
+                                                <ul class="pagination">
+                                                    {% if students.has_previous %}
+                                                        <a href="{% url 'students' %}?page={{ students.previous_page_number }}">
+                                                            <button class="btn btn-warning" style="margin: 10px" type="submit">Previous</button>
+                                                        </a>
+                                                    {% endif %}
+
+
+                                                    {% if students.has_next %}
+                                                        <a href="{% url 'students' %}?page={{ students.next_page_number }}">
+                                                            <button class="btn btn-primary" style="margin: 10px" type="submit">Next</button>
+                                                        </a>
+                                                    {% endif %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

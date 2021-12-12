@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from kanakku.dreamguystech.com/template-html/settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 05:33:56 GMT -->
+
+	<body>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+
+
+			<!-- Page Wrapper -->
+			<div class="page-wrapper">
+				<div class="content container-fluid">
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-6">
+								<h3 class="page-title">KULDER</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="{% url 'home' %}">AnaSayfa</a>
+									</li>
+									<li class="breadcrumb-item active">Support Programs</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+
+						<div class="col-xl-12 col-md-8">
+
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">{{ support.title }} Programi</h5>
+								</div>
+								<div class="card-body">
+
+                                    <div class="card bg-white">
+
+										<div class="card-body">
+
+											<blockquote class="blockquote mb-0">
+												<p class="mb-0">{{ support.description }}</p>
+											</blockquote>
+                                            <br>
+                                            <button class="btn btn-warning" style="border-radius: 35px"><a href="{% url 'support-programs' %}" >Geri Don</a></button>
+										</div>
+									</div>
+
+
+									<!-- Form -->
+
+{#									<!-- /Form --><div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">#}
+{#											<button disabled="" type="button" class="btn btn-block btn-outline-success">Success</button>#}
+{#										</div>#}
+
+                                    <div class="row row-sm align-items-center mt-3">
+{#										<div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">#}
+{#											<button disabled="" type="button" class="btn btn-block btn-outline-success">Success</button>#}
+{#										</div>#}
+{#                                        <a href="{% url 'support-programs' %}">Geri Don</a>#}
+
+									</div>
+
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Page Wrapper -->
+		</div>
+		<!-- /Main Wrapper -->
+
+
+
+	</body>
+
+<!-- Mirrored from kanakku.dreamguystech.com/template-html/settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 05:33:58 GMT -->
+</html>
+{% endblock %}

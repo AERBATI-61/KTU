@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from kanakku.dreamguystech.com/template-html/settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 05:33:56 GMT -->
+
+	<body>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+
+
+			<!-- Page Wrapper -->
+			<div class="page-wrapper">
+				<div class="content container-fluid">
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-6">
+								<h3 class="page-title">Settings</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Dashboard</a>
+									</li>
+									<li class="breadcrumb-item active">Profile Settings</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+
+						<div class="col-xl-12 col-md-8">
+
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">{{ lesson.name }} Programi</h5>
+								</div>
+								<div class="card-body">
+
+									<!-- Form -->
+									<form>
+										<div class="row form-group">
+											<label for="name" class="col-sm-3 col-form-label input-label"></label>
+											<div class="col-sm-9">
+												<div class="d-flex align-items-center">
+
+													<label class=" avatar-xxl m-0" for="edit_img">
+														<img id="avatarImg" class="avatar-img" src="{{ lesson.image.url}}" alt="Profile Image">
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="row form-group">
+											<label for="name" class="col-sm-3 col-form-label input-label">Name</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="name" readonly="readonly"  value="{{ lesson.name }}">
+											</div>
+										</div>
+
+										<div class="row form-group">
+											<label for="phone" class="col-sm-3 col-form-label input-label">Range <span class="text-muted"></span></label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="phone" readonly = "readonly" value="{{ lesson.range}}">
+											</div>
+										</div>
+										<div class="row form-group">
+											<label for="location" class="col-sm-3 col-form-label input-label">Times</label>
+											<div class="col-sm-9">
+												<div class="mb-3">
+													<input type="text" class="form-control" id="location" readonly = "readonly" value="Days of Lesson:       {{ lesson.days }}">
+												</div>
+												<div class="mb-3">
+													<input type="text" class="form-control" readonly = "readonly" value="Start Time:            {{ lesson.lessen_start_time }}">
+												</div>
+												<input type="text" class="form-control" readonly = "readonly" value="End Time:                {{ lesson.lesson_end_time}}">
+											</div>
+										</div>
+
+
+                                        <div class="row form-group">
+											<label for="phone" class="col-sm-3 col-form-label input-label">Description <span class="text-muted"></span></label>
+											<div class="col-sm-9">
+												<textarea rows="5" cols="5" class="form-control" readonly = "readonly" >{{ lesson.description }}</textarea>
+											</div>
+										</div>
+
+
+
+									</form>
+									<!-- /Form -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Page Wrapper -->
+		</div>
+		<!-- /Main Wrapper -->
+
+
+
+	</body>
+
+<!-- Mirrored from kanakku.dreamguystech.com/template-html/settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 05:33:58 GMT -->
+</html>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+    <div class="page-wrapper" style="min-height: 969px;">
+        <div class="content container-fluid">
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="page-title">Enjoy</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home.html">KULDER</a></li>
+                            <li class="breadcrumb-item active">Activities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="comp-sec-wrapper">
+
+                <section class="comp-section comp-cards">
+                    <div class="section-header">
+                        <h3 class="section-title">Activities</h3>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="row">
+
+                        {% for activity in activities %}
+                            <div class="col-12 col-md-6 col-lg-4 d-flex">
+                                <div class="card flex-fill bg-white">
+                                    <a href="{% url 'activity-detail' activity.slug%}"><img alt="Card Image"
+                                         style="max-width: 100%; min-width: 100%; max-height: 320px;min-height: 320px"
+                                         src="{{ activity.image.url }}"></a>
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">{{ activity.title }}</h5>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">{{ activity.location }}</li>
+                                        <li class="list-group-item">{{ activity.description|truncatechars:50 }}</li>
+                                        <a href="{% url 'activity-detail' activity.slug %}"><button type="button" class="btn btn-success" style="float: right; margin: 30px">Read More</button></a>
+                                        </ul>
+
+                                </div>
+                            </div>
+
+
+                        {% endfor %}
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+

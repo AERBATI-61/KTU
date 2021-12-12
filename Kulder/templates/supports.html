@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <div class="main-wrapper">
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h3 class="page-title">KTU</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'home' %}">KULDER</a>
+                                </li>
+                                <li class="breadcrumb-item active">Students</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /Page Header -->
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <div class="card card-table">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover datatable">
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th>Kind Of Support</th>
+                                            <th>For Who</th>
+                                            <th>Description</th>
+                                            <th class="text-right">More</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for support in supports %}
+                                            <tr>
+
+
+                                                    <td>
+                                                        <h2 class="table-avatar">
+                                                            <a href="{% url 'support-program' support.slug %}"
+                                                               class="avatar avatar-sm mr-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{{ support.image.url }}"
+                                                                    alt="User Image"></a>
+                                                            <a href="#">{{ support.title }}
+                                                                <span>#</span></a>
+                                                        </h2>
+                                                    </td>
+
+
+
+
+
+
+                                                <td>{{ support.kind_of_support }}</td>
+                                                <td>{{ support.description|truncatechars:30 }}</td>
+                                                <td class="text-right">
+                                                    <a href="{% url 'support-program' support.slug %}"
+                                                       class="btn btn-sm btn-white text-success mr-2"><i
+                                                            class="far fa-eye mr-1"></i> Detail</a>
+
+                                                </td>
+                                            </tr>
+
+                                        {% endfor %}
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

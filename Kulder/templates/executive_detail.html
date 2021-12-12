@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <!-- Mirrored from kanakku.dreamguystech.com/template-html/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 05:33:56 GMT -->
+
+    <body>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Header -->
+
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+
+                <div class="row justify-content-lg-center">
+                    <div class="col-lg-10">
+
+                        <!-- Page Header -->
+                        <div class="page-header">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="page-title">KTU</h3>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="{% url 'home' %}">KULDER</a></li>
+                                        <li class="breadcrumb-item active">Executive</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Page Header -->
+
+
+                        <div class="text-center mb-5">
+                           {% if executive.profile_pic %}
+                                <label class="avatar avatar-xxl profile-cover-avatar" for="avatar_upload">
+                                <img class="avatar-img" src="{{ executive.profile_pic.url }}" alt="Profile Image">
+                            </label>
+                           {% else %}
+                               <label class="avatar avatar-xxl profile-cover-avatar" for="avatar_upload">
+                                <img class="avatar-img" src="{% static 'assets/img/profiles/avatar-01.jpg' %}" alt="Profile Image">
+                            </label>
+
+                           {% endif %}
+                            <h2>{{ executive.name }}</h2>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <i class="far fa-school"></i> <span>{{ executive.profession }}</span>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-book"></i> {{ executive.possition }}
+                                </li>
+                                {#									<li class="list-inline-item">#}
+                                {#										<i class="far fa-calendar-alt"></i> <span>Joined {{ executive }}</span>#}
+                                {#									</li>#}
+                            </ul>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title d-flex justify-content-between">
+                                            <span>{{ executive.name }}</span>
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="py-0">
+                                                <small class="text-dark">Profession</small>
+                                            </li>
+                                            <li>
+                                                {{ executive.profession }}
+                                            </li>
+                                            <li>
+                                                {{ executive.possition }}
+                                            </li>
+                                            <br>
+                                            <li class="py-0">
+                                                <small class="text-dark">Contact</small>
+                                            </li>
+                                            <li>
+                                                {{ executive.phone }}
+                                            </li>
+                                            <li>
+                                                {{ executive.email }}
+                                            </li>
+                                            <br>
+                                            <li class="pt-2 pb-0">
+                                                <small class="text-dark">Nationality</small>
+                                            </li>
+                                            <li>
+                                                {{ executive.nationality.name }}
+                                            </li>
+                                            <br>
+
+                                            <li class="pt-2 pb-0">
+                                                <small class="text-dark">Address</small>
+                                            </li>
+                                            <li>
+                                                {{ executive.address }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title" style="color: #4b75bd">About of {{ executive.name }}</h5>
+                                    </div>
+                                    <div class="card-body ">
+                                        <ul class="activity-feed">
+                                            <div class="feed-date">{{ executive.about }}</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card-header">
+                                        <h5 class="card-title" style="color: #4b75bd">Experience of {{ executive.name }}</h5>
+                                    </div>
+                                    <div class="card-body ">
+                                        <ul class="activity-feed">
+                                            <div class="feed-date">{{ executive.experience }}</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /Page Wrapper -->
+
+    </div>
+
+    </body>
+
+    <!-- Mirrored from kanakku.dreamguystech.com/template-html/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 05:33:56 GMT -->
+    </html>
+
+{% endblock %}

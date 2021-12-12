@@ -1,0 +1,1700 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="page-wrapper" style="min-height: 937px;">
+        <div class="content container-fluid">
+            {% for about in aboutus %}
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+										<span class="dash-widget-icon bg-1">
+											<i class="fas fa-school"></i>
+										</span>
+                                    <div class="dash-count">
+                                        <div class="dash-title">{{ about.name }}</div>
+                                        <div class="dash-counts">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm mt-3">
+                                    <div class="progress-bar bg-5" role="progressbar" style="width: 100%"
+                                         aria-valuenow="75"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-muted mt-3 mb-0"><span class="text-danger mr-1"><i
+                                        class="fas fa-arrow-up mr-1"></i>Dikkat</span>7/24 Hizmetinizdeyiz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+										<span class="dash-widget-icon bg-2">
+											<i class="fas fa-phone"></i>
+										</span>
+                                    <div class="dash-count">
+                                        <div class="dash-title">{{ about.tel1 }}</div>
+                                        <div class="dash-counts">
+                                            <p>{{ about.tel2 }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm mt-3">
+                                    <div class="progress-bar bg-6" role="progressbar" style="width: 100%"
+                                         aria-valuenow="75"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i
+                                        class="fas fa-arrow-up mr-1"></i>iletisim </span> 7/24</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+										<span class="dash-widget-icon bg-3">
+											<i class="fas fa-envelope-open"></i>
+										</span>
+                                    <div class="dash-count">
+                                        <div class="dash-title">Email</div>
+                                        <div class="dash-counts">
+                                            <p>{{ about.email }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm mt-3">
+                                    <div class="progress-bar bg-7" role="progressbar" style="width: 100%"
+                                         aria-valuenow="75"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i
+                                        class="fas fa-arrow-up mr-1"></i>iletisim</span> 7/24</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+										<span class="dash-widget-icon bg-4">
+											<i class="fas fa-map-marker-alt"></i>
+										</span>
+                                    <div class="dash-count">
+                                        <div class="dash-title">Adress</div>
+                                        <div class="dash-counts">
+                                            <p>{{ about.adress }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm mt-3">
+                                    <div class="progress-bar bg-8" role="progressbar" style="width: 100%"
+                                         aria-valuenow="75"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-muted mt-3 mb-0"><span class="text-danger mr-1"><i
+                                        class="fas fa-arrow-up mr-1"></i>Ulasim</span>7/24</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="comp-section comp-cards">
+
+
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4 d-flex">
+                            <div class="card flex-fill bg-white">
+
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Hedeflerimiz</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ about.goals|truncatewords:100 }}</li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 d-flex">
+                            <div class="card flex-fill bg-white">
+
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Hakkimizda</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ about.aboutus|truncatewords:100 }}</li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 d-flex">
+                            <div class="card flex-fill bg-white">
+
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Yorumlar</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ about.comments|truncatewords:200 }}</li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            {% endfor %}
+
+            {#            <div class="row">#}
+            {#                <div class="col-xl-7 d-flex">#}
+            {#                    <div class="card flex-fill">#}
+            {#                        <div class="card-header">#}
+            {#                            <div class="d-flex justify-content-between align-items-center">#}
+            {#                                <h5 class="card-title">Sales Analytics</h5>#}
+            {#                                <div class="dropdown" data-toggle="dropdown">#}
+            {#                                    <a href="javascript:void(0);" class="btn btn-white btn-sm dropdown-toggle"#}
+            {#                                       role="button" data-toggle="dropdown">#}
+            {#                                        Monthly#}
+            {#                                    </a>#}
+            {#                                    <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                        <a href="javascript:void(0);" class="dropdown-item">Weekly</a>#}
+            {#                                        <a href="javascript:void(0);" class="dropdown-item">Monthly</a>#}
+            {#                                        <a href="javascript:void(0);" class="dropdown-item">Yearly</a>#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                        <div class="card-body">#}
+            {#                            <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">#}
+            {#                                <div class="w-md-100 d-flex align-items-center mb-3">#}
+            {#                                    <div>#}
+            {#                                        <span>Total Sales</span>#}
+            {#                                        <p class="h3 text-primary mr-5">$1000</p>#}
+            {#                                    </div>#}
+            {#                                    <div>#}
+            {#                                        <span>Receipts</span>#}
+            {#                                        <p class="h3 text-success mr-5">$1000</p>#}
+            {#                                    </div>#}
+            {#                                    <div>#}
+            {#                                        <span>Expenses</span>#}
+            {#                                        <p class="h3 text-danger mr-5">$300</p>#}
+            {#                                    </div>#}
+            {#                                    <div>#}
+            {#                                        <span>Earnings</span>#}
+            {#                                        <p class="h3 text-dark mr-5">$700</p>#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {##}
+            {#                            <div id="sales_chart" style="min-height: 365px;">#}
+            {#                                <div id="apexchartsyds3vwhf"#}
+            {#                                     class="apexcharts-canvas apexchartsyds3vwhf apexcharts-theme-light"#}
+            {#                                     style="width: 529px; height: 350px;">#}
+            {#                                    <svg id="SvgjsSvg1191" width="529" height="350" xmlns="http://www.w3.org/2000/svg"#}
+            {#                                         version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"#}
+            {#                                         xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg"#}
+            {#                                         xmlns:data="ApexChartsNS" transform="translate(0, 0)"#}
+            {#                                         style="background: transparent;">#}
+            {#                                        <foreignObject x="0" y="0" width="529" height="350">#}
+            {#                                            <div class="apexcharts-legend apexcharts-align-center position-bottom"#}
+            {#                                                 xmlns="http://www.w3.org/1999/xhtml"#}
+            {#                                                 style="inset: auto 0px 1px; position: absolute; max-height: 175px;">#}
+            {#                                                <div class="apexcharts-legend-series" rel="1" seriesname="Received"#}
+            {#                                                     data:collapsed="false" style="margin: 2px 5px;"><span#}
+            {#                                                        class="apexcharts-legend-marker" rel="1" data:collapsed="false"#}
+            {#                                                        style="background: rgb(118, 56, 255) !important; color: rgb(118, 56, 255); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 2px;"></span><span#}
+            {#                                                        class="apexcharts-legend-text" rel="1" i="0"#}
+            {#                                                        data:default-text="Received" data:collapsed="false"#}
+            {#                                                        style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400; font-family: Poppins, sans-serif;">Received</span>#}
+            {#                                                </div>#}
+            {#                                                <div class="apexcharts-legend-series" rel="2" seriesname="Pending"#}
+            {#                                                     data:collapsed="false" style="margin: 2px 5px;"><span#}
+            {#                                                        class="apexcharts-legend-marker" rel="2" data:collapsed="false"#}
+            {#                                                        style="background: rgb(253, 166, 0) !important; color: rgb(253, 166, 0); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 2px;"></span><span#}
+            {#                                                        class="apexcharts-legend-text" rel="2" i="1"#}
+            {#                                                        data:default-text="Pending" data:collapsed="false"#}
+            {#                                                        style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400; font-family: Poppins, sans-serif;">Pending</span>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                            <style type="text/css">#}
+            {##}
+            {#                                                .apexcharts-legend {#}
+            {#                                                    display: flex;#}
+            {#                                                    overflow: auto;#}
+            {#                                                    padding: 0 10px;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend.position-bottom, .apexcharts-legend.position-top {#}
+            {#                                                    flex-wrap: wrap#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend.position-right, .apexcharts-legend.position-left {#}
+            {#                                                    flex-direction: column;#}
+            {#                                                    bottom: 0;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend.position-bottom.apexcharts-align-left, .apexcharts-legend.position-top.apexcharts-align-left, .apexcharts-legend.position-right, .apexcharts-legend.position-left {#}
+            {#                                                    justify-content: flex-start;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend.position-bottom.apexcharts-align-center, .apexcharts-legend.position-top.apexcharts-align-center {#}
+            {#                                                    justify-content: center;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend.position-bottom.apexcharts-align-right, .apexcharts-legend.position-top.apexcharts-align-right {#}
+            {#                                                    justify-content: flex-end;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend-series {#}
+            {#                                                    cursor: pointer;#}
+            {#                                                    line-height: normal;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend.position-bottom .apexcharts-legend-series, .apexcharts-legend.position-top .apexcharts-legend-series {#}
+            {#                                                    display: flex;#}
+            {#                                                    align-items: center;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend-text {#}
+            {#                                                    position: relative;#}
+            {#                                                    font-size: 14px;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend-text *, .apexcharts-legend-marker * {#}
+            {#                                                    pointer-events: none;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend-marker {#}
+            {#                                                    position: relative;#}
+            {#                                                    display: inline-block;#}
+            {#                                                    cursor: pointer;#}
+            {#                                                    margin-right: 3px;#}
+            {#                                                    border-style: solid;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend.apexcharts-align-right .apexcharts-legend-series, .apexcharts-legend.apexcharts-align-left .apexcharts-legend-series {#}
+            {#                                                    display: inline-block;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend-series.apexcharts-no-click {#}
+            {#                                                    cursor: auto;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-legend .apexcharts-hidden-zero-series, .apexcharts-legend .apexcharts-hidden-null-series {#}
+            {#                                                    display: none !important;#}
+            {#                                                }#}
+            {##}
+            {#                                                .apexcharts-inactive-legend {#}
+            {#                                                    opacity: 0.45;#}
+            {#                                                }</style>#}
+            {#                                        </foreignObject>#}
+            {#                                        <g id="SvgjsG1193" class="apexcharts-inner apexcharts-graphical"#}
+            {#                                           transform="translate(52.359375, 30)">#}
+            {#                                            <defs id="SvgjsDefs1192">#}
+            {#                                                <linearGradient id="SvgjsLinearGradient1198" x1="0" y1="0" x2="0"#}
+            {#                                                                y2="1">#}
+            {#                                                    <stop id="SvgjsStop1199" stop-opacity="0.4"#}
+            {#                                                          stop-color="rgba(216,227,240,0.4)" offset="0"></stop>#}
+            {#                                                    <stop id="SvgjsStop1200" stop-opacity="0.5"#}
+            {#                                                          stop-color="rgba(190,209,230,0.5)" offset="1"></stop>#}
+            {#                                                    <stop id="SvgjsStop1201" stop-opacity="0.5"#}
+            {#                                                          stop-color="rgba(190,209,230,0.5)" offset="1"></stop>#}
+            {#                                                </linearGradient>#}
+            {#                                                <clipPath id="gridRectMaskyds3vwhf">#}
+            {#                                                    <rect id="SvgjsRect1203" width="472.640625" height="266.348" x="-3"#}
+            {#                                                          y="-1" rx="0" ry="0" opacity="1" stroke-width="0"#}
+            {#                                                          stroke="none" stroke-dasharray="0" fill="#fff"></rect>#}
+            {#                                                </clipPath>#}
+            {#                                                <clipPath id="gridRectMarkerMaskyds3vwhf">#}
+            {#                                                    <rect id="SvgjsRect1204" width="470.640625" height="268.348" x="-2"#}
+            {#                                                          y="-2" rx="0" ry="0" opacity="1" stroke-width="0"#}
+            {#                                                          stroke="none" stroke-dasharray="0" fill="#fff"></rect>#}
+            {#                                                </clipPath>#}
+            {#                                            </defs>#}
+            {#                                            <rect id="SvgjsRect1202" width="10.768629807692307" height="264.348" x="0"#}
+            {#                                                  y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke-dasharray="3"#}
+            {#                                                  fill="url(#SvgjsLinearGradient1198)" class="apexcharts-xcrosshairs"#}
+            {#                                                  y2="264.348" filter="none" fill-opacity="0.9"></rect>#}
+            {#                                            <g id="SvgjsG1236" class="apexcharts-xaxis" transform="translate(0, 0)">#}
+            {#                                                <g id="SvgjsG1237" class="apexcharts-xaxis-texts-g"#}
+            {#                                                   transform="translate(0, -4)">#}
+            {#                                                    <text id="SvgjsText1239" font-family="Poppins, sans-serif"#}
+            {#                                                          x="23.33203125" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1240">Jan</tspan>#}
+            {#                                                        <title>Jan</title></text>#}
+            {#                                                    <text id="SvgjsText1242" font-family="Poppins, sans-serif"#}
+            {#                                                          x="69.99609375" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1243">Feb</tspan>#}
+            {#                                                        <title>Feb</title></text>#}
+            {#                                                    <text id="SvgjsText1245" font-family="Poppins, sans-serif"#}
+            {#                                                          x="116.66015625" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1246">Mar</tspan>#}
+            {#                                                        <title>Mar</title></text>#}
+            {#                                                    <text id="SvgjsText1248" font-family="Poppins, sans-serif"#}
+            {#                                                          x="163.32421875" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1249">Apr</tspan>#}
+            {#                                                        <title>Apr</title></text>#}
+            {#                                                    <text id="SvgjsText1251" font-family="Poppins, sans-serif"#}
+            {#                                                          x="209.98828125" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1252">May</tspan>#}
+            {#                                                        <title>May</title></text>#}
+            {#                                                    <text id="SvgjsText1254" font-family="Poppins, sans-serif"#}
+            {#                                                          x="256.65234375" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1255">Jun</tspan>#}
+            {#                                                        <title>Jun</title></text>#}
+            {#                                                    <text id="SvgjsText1257" font-family="Poppins, sans-serif"#}
+            {#                                                          x="303.31640625" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1258">Jul</tspan>#}
+            {#                                                        <title>Jul</title></text>#}
+            {#                                                    <text id="SvgjsText1260" font-family="Poppins, sans-serif"#}
+            {#                                                          x="349.98046875" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1261">Aug</tspan>#}
+            {#                                                        <title>Aug</title></text>#}
+            {#                                                    <text id="SvgjsText1263" font-family="Poppins, sans-serif"#}
+            {#                                                          x="396.64453125" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1264">Sep</tspan>#}
+            {#                                                        <title>Sep</title></text>#}
+            {#                                                    <text id="SvgjsText1266" font-family="Poppins, sans-serif"#}
+            {#                                                          x="443.30859375" y="293.348" text-anchor="middle"#}
+            {#                                                          dominant-baseline="auto" font-size="12px" font-weight="400"#}
+            {#                                                          fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label "#}
+            {#                                                          style="font-family: Poppins, sans-serif;">#}
+            {#                                                        <tspan id="SvgjsTspan1267">Oct</tspan>#}
+            {#                                                        <title>Oct</title></text>#}
+            {#                                                </g>#}
+            {#                                                <line id="SvgjsLine1268" x1="0" y1="265.348" x2="466.640625"#}
+            {#                                                      y2="265.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      stroke-width="1"></line>#}
+            {#                                            </g>#}
+            {#                                            <g id="SvgjsG1285" class="apexcharts-grid">#}
+            {#                                                <g id="SvgjsG1286" class="apexcharts-gridlines-horizontal">#}
+            {#                                                    <line id="SvgjsLine1299" x1="0" y1="0" x2="466.640625" y2="0"#}
+            {#                                                          stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-gridline"></line>#}
+            {#                                                    <line id="SvgjsLine1300" x1="0" y1="52.869600000000005"#}
+            {#                                                          x2="466.640625" y2="52.869600000000005" stroke="#e0e0e0"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-gridline"></line>#}
+            {#                                                    <line id="SvgjsLine1301" x1="0" y1="105.73920000000001"#}
+            {#                                                          x2="466.640625" y2="105.73920000000001" stroke="#e0e0e0"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-gridline"></line>#}
+            {#                                                    <line id="SvgjsLine1302" x1="0" y1="158.60880000000003"#}
+            {#                                                          x2="466.640625" y2="158.60880000000003" stroke="#e0e0e0"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-gridline"></line>#}
+            {#                                                    <line id="SvgjsLine1303" x1="0" y1="211.47840000000002"#}
+            {#                                                          x2="466.640625" y2="211.47840000000002" stroke="#e0e0e0"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-gridline"></line>#}
+            {#                                                    <line id="SvgjsLine1304" x1="0" y1="264.348" x2="466.640625"#}
+            {#                                                          y2="264.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-gridline"></line>#}
+            {#                                                </g>#}
+            {#                                                <g id="SvgjsG1287" class="apexcharts-gridlines-vertical"></g>#}
+            {#                                                <line id="SvgjsLine1288" x1="0" y1="265.348" x2="0" y2="271.348"#}
+            {#                                                      stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1289" x1="46.6640625" y1="265.348" x2="46.6640625"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1290" x1="93.328125" y1="265.348" x2="93.328125"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1291" x1="139.9921875" y1="265.348" x2="139.9921875"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1292" x1="186.65625" y1="265.348" x2="186.65625"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1293" x1="233.3203125" y1="265.348" x2="233.3203125"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1294" x1="279.984375" y1="265.348" x2="279.984375"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1295" x1="326.6484375" y1="265.348" x2="326.6484375"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1296" x1="373.3125" y1="265.348" x2="373.3125"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1297" x1="419.9765625" y1="265.348" x2="419.9765625"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1298" x1="466.640625" y1="265.348" x2="466.640625"#}
+            {#                                                      y2="271.348" stroke="#e0e0e0" stroke-dasharray="0"#}
+            {#                                                      class="apexcharts-xaxis-tick"></line>#}
+            {#                                                <line id="SvgjsLine1306" x1="0" y1="264.348" x2="466.640625"#}
+            {#                                                      y2="264.348" stroke="transparent" stroke-dasharray="0"></line>#}
+            {#                                                <line id="SvgjsLine1305" x1="0" y1="1" x2="0" y2="264.348"#}
+            {#                                                      stroke="transparent" stroke-dasharray="0"></line>#}
+            {#                                            </g>#}
+            {#                                            <g id="SvgjsG1205" class="apexcharts-bar-series apexcharts-plot-series">#}
+            {#                                                <g id="SvgjsG1206" class="apexcharts-series" rel="1"#}
+            {#                                                   seriesName="Received" data:realIndex="0">#}
+            {#                                                    <path id="SvgjsPath1208"#}
+            {#                                                          d="M 7.17908653846154 264.348L 7.17908653846154 192.02271745192306Q 11.563401442307693 188.6384025480769 15.947716346153847 192.02271745192306L 15.947716346153847 192.02271745192306L 15.947716346153847 264.348L 15.947716346153847 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 7.17908653846154 264.348L 7.17908653846154 192.02271745192306Q 11.563401442307693 188.6384025480769 15.947716346153847 192.02271745192306L 15.947716346153847 192.02271745192306L 15.947716346153847 264.348L 15.947716346153847 264.348z"#}
+            {#                                                          pathFrom="M 7.17908653846154 264.348L 7.17908653846154 264.348L 15.947716346153847 264.348L 15.947716346153847 264.348L 15.947716346153847 264.348L 7.17908653846154 264.348"#}
+            {#                                                          cy="190.33056" cx="42.07451923076923" j="0" val="70"#}
+            {#                                                          barHeight="74.01744000000001"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1209"#}
+            {#                                                          d="M 43.07451923076923 264.348L 43.07451923076923 107.43135745192309Q 47.45883413461539 104.04704254807694 51.84314903846154 107.43135745192309L 51.84314903846154 107.43135745192309L 51.84314903846154 264.348L 51.84314903846154 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 43.07451923076923 264.348L 43.07451923076923 107.43135745192309Q 47.45883413461539 104.04704254807694 51.84314903846154 107.43135745192309L 51.84314903846154 107.43135745192309L 51.84314903846154 264.348L 51.84314903846154 264.348z"#}
+            {#                                                          pathFrom="M 43.07451923076923 264.348L 43.07451923076923 264.348L 51.84314903846154 264.348L 51.84314903846154 264.348L 51.84314903846154 264.348L 43.07451923076923 264.348"#}
+            {#                                                          cy="105.73920000000001" cx="77.96995192307693" j="1" val="150"#}
+            {#                                                          barHeight="158.6088" barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1210"#}
+            {#                                                          d="M 78.96995192307693 264.348L 78.96995192307693 181.44879745192307Q 83.3542668269231 178.0644825480769 87.73858173076924 181.44879745192307L 87.73858173076924 181.44879745192307L 87.73858173076924 264.348L 87.73858173076924 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 78.96995192307693 264.348L 78.96995192307693 181.44879745192307Q 83.3542668269231 178.0644825480769 87.73858173076924 181.44879745192307L 87.73858173076924 181.44879745192307L 87.73858173076924 264.348L 87.73858173076924 264.348z"#}
+            {#                                                          pathFrom="M 78.96995192307693 264.348L 78.96995192307693 264.348L 87.73858173076924 264.348L 87.73858173076924 264.348L 87.73858173076924 264.348L 78.96995192307693 264.348"#}
+            {#                                                          cy="179.75664" cx="113.86538461538463" j="2" val="80"#}
+            {#                                                          barHeight="84.59136000000001"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1211"#}
+            {#                                                          d="M 114.86538461538463 264.348L 114.86538461538463 75.70959745192307Q 119.24969951923077 72.32528254807693 123.63401442307693 75.70959745192307L 123.63401442307693 75.70959745192307L 123.63401442307693 264.348L 123.63401442307693 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 114.86538461538463 264.348L 114.86538461538463 75.70959745192307Q 119.24969951923077 72.32528254807693 123.63401442307693 75.70959745192307L 123.63401442307693 75.70959745192307L 123.63401442307693 264.348L 123.63401442307693 264.348z"#}
+            {#                                                          pathFrom="M 114.86538461538463 264.348L 114.86538461538463 264.348L 123.63401442307693 264.348L 123.63401442307693 264.348L 123.63401442307693 264.348L 114.86538461538463 264.348"#}
+            {#                                                          cy="74.01744" cx="149.76081730769232" j="3" val="180"#}
+            {#                                                          barHeight="190.33056000000002"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1212"#}
+            {#                                                          d="M 150.76081730769232 264.348L 150.76081730769232 107.43135745192309Q 155.14513221153848 104.04704254807694 159.52944711538464 107.43135745192309L 159.52944711538464 107.43135745192309L 159.52944711538464 264.348L 159.52944711538464 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 150.76081730769232 264.348L 150.76081730769232 107.43135745192309Q 155.14513221153848 104.04704254807694 159.52944711538464 107.43135745192309L 159.52944711538464 107.43135745192309L 159.52944711538464 264.348L 159.52944711538464 264.348z"#}
+            {#                                                          pathFrom="M 150.76081730769232 264.348L 150.76081730769232 264.348L 159.52944711538464 264.348L 159.52944711538464 264.348L 159.52944711538464 264.348L 150.76081730769232 264.348"#}
+            {#                                                          cy="105.73920000000001" cx="185.65625" j="4" val="150"#}
+            {#                                                          barHeight="158.6088" barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1213"#}
+            {#                                                          d="M 186.65625 264.348L 186.65625 80.99655745192307Q 191.04056490384616 77.61224254807692 195.42487980769232 80.99655745192307L 195.42487980769232 80.99655745192307L 195.42487980769232 264.348L 195.42487980769232 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 186.65625 264.348L 186.65625 80.99655745192307Q 191.04056490384616 77.61224254807692 195.42487980769232 80.99655745192307L 195.42487980769232 80.99655745192307L 195.42487980769232 264.348L 195.42487980769232 264.348z"#}
+            {#                                                          pathFrom="M 186.65625 264.348L 186.65625 264.348L 195.42487980769232 264.348L 195.42487980769232 264.348L 195.42487980769232 264.348L 186.65625 264.348"#}
+            {#                                                          cy="79.30439999999999" cx="221.55168269230768" j="5" val="175"#}
+            {#                                                          barHeight="185.04360000000003"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1214"#}
+            {#                                                          d="M 222.55168269230768 264.348L 222.55168269230768 53.50436545192308Q 226.93599759615384 50.120050548076925 231.3203125 53.50436545192308L 231.3203125 53.50436545192308L 231.3203125 264.348L 231.3203125 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 222.55168269230768 264.348L 222.55168269230768 53.50436545192308Q 226.93599759615384 50.120050548076925 231.3203125 53.50436545192308L 231.3203125 53.50436545192308L 231.3203125 264.348L 231.3203125 264.348z"#}
+            {#                                                          pathFrom="M 222.55168269230768 264.348L 222.55168269230768 264.348L 231.3203125 264.348L 231.3203125 264.348L 231.3203125 264.348L 222.55168269230768 264.348"#}
+            {#                                                          cy="51.812208" cx="257.44711538461536" j="6" val="201"#}
+            {#                                                          barHeight="212.53579200000001"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1215"#}
+            {#                                                          d="M 258.44711538461536 264.348L 258.44711538461536 202.59663745192307Q 262.8314302884615 199.2123225480769 267.2157451923077 202.59663745192307L 267.2157451923077 202.59663745192307L 267.2157451923077 264.348L 267.2157451923077 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 258.44711538461536 264.348L 258.44711538461536 202.59663745192307Q 262.8314302884615 199.2123225480769 267.2157451923077 202.59663745192307L 267.2157451923077 202.59663745192307L 267.2157451923077 264.348L 267.2157451923077 264.348z"#}
+            {#                                                          pathFrom="M 258.44711538461536 264.348L 258.44711538461536 264.348L 267.2157451923077 264.348L 267.2157451923077 264.348L 267.2157451923077 264.348L 258.44711538461536 264.348"#}
+            {#                                                          cy="200.90448" cx="293.34254807692304" j="7" val="60"#}
+            {#                                                          barHeight="63.44352000000001"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1216"#}
+            {#                                                          d="M 294.34254807692304 264.348L 294.34254807692304 54.56175745192307Q 298.72686298076917 51.17744254807692 303.11117788461536 54.56175745192307L 303.11117788461536 54.56175745192307L 303.11117788461536 264.348L 303.11117788461536 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 294.34254807692304 264.348L 294.34254807692304 54.56175745192307Q 298.72686298076917 51.17744254807692 303.11117788461536 54.56175745192307L 303.11117788461536 54.56175745192307L 303.11117788461536 264.348L 303.11117788461536 264.348z"#}
+            {#                                                          pathFrom="M 294.34254807692304 264.348L 294.34254807692304 264.348L 303.11117788461536 264.348L 303.11117788461536 264.348L 303.11117788461536 264.348L 294.34254807692304 264.348"#}
+            {#                                                          cy="52.86959999999999" cx="329.2379807692307" j="8" val="200"#}
+            {#                                                          barHeight="211.47840000000002"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1217"#}
+            {#                                                          d="M 330.2379807692307 264.348L 330.2379807692307 139.15311745192307Q 334.62229567307685 135.7688025480769 339.00661057692304 139.15311745192307L 339.00661057692304 139.15311745192307L 339.00661057692304 264.348L 339.00661057692304 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 330.2379807692307 264.348L 330.2379807692307 139.15311745192307Q 334.62229567307685 135.7688025480769 339.00661057692304 139.15311745192307L 339.00661057692304 139.15311745192307L 339.00661057692304 264.348L 339.00661057692304 264.348z"#}
+            {#                                                          pathFrom="M 330.2379807692307 264.348L 330.2379807692307 264.348L 339.00661057692304 264.348L 339.00661057692304 264.348L 339.00661057692304 264.348L 330.2379807692307 264.348"#}
+            {#                                                          cy="137.46096" cx="365.1334134615384" j="9" val="120"#}
+            {#                                                          barHeight="126.88704000000001"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1218"#}
+            {#                                                          d="M 366.1334134615384 264.348L 366.1334134615384 65.13567745192309Q 370.5177283653845 61.75136254807693 374.9020432692307 65.13567745192309L 374.9020432692307 65.13567745192309L 374.9020432692307 264.348L 374.9020432692307 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 366.1334134615384 264.348L 366.1334134615384 65.13567745192309Q 370.5177283653845 61.75136254807693 374.9020432692307 65.13567745192309L 374.9020432692307 65.13567745192309L 374.9020432692307 264.348L 374.9020432692307 264.348z"#}
+            {#                                                          pathFrom="M 366.1334134615384 264.348L 366.1334134615384 264.348L 374.9020432692307 264.348L 374.9020432692307 264.348L 374.9020432692307 264.348L 366.1334134615384 264.348"#}
+            {#                                                          cy="63.44352000000001" cx="401.0288461538461" j="10" val="190"#}
+            {#                                                          barHeight="200.90448" barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1219"#}
+            {#                                                          d="M 402.0288461538461 264.348L 402.0288461538461 96.85743745192308Q 406.4131610576922 93.47312254807693 410.7974759615384 96.85743745192308L 410.7974759615384 96.85743745192308L 410.7974759615384 264.348L 410.7974759615384 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 402.0288461538461 264.348L 402.0288461538461 96.85743745192308Q 406.4131610576922 93.47312254807693 410.7974759615384 96.85743745192308L 410.7974759615384 96.85743745192308L 410.7974759615384 264.348L 410.7974759615384 264.348z"#}
+            {#                                                          pathFrom="M 402.0288461538461 264.348L 402.0288461538461 264.348L 410.7974759615384 264.348L 410.7974759615384 264.348L 410.7974759615384 264.348L 402.0288461538461 264.348"#}
+            {#                                                          cy="95.16528" cx="436.92427884615375" j="11" val="160"#}
+            {#                                                          barHeight="169.18272000000002"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1220"#}
+            {#                                                          d="M 437.92427884615375 264.348L 437.92427884615375 213.1705574519231Q 442.3085937499999 209.78624254807693 446.6929086538461 213.1705574519231L 446.6929086538461 213.1705574519231L 446.6929086538461 264.348L 446.6929086538461 264.348z"#}
+            {#                                                          fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                          stroke="transparent" stroke-opacity="1"#}
+            {#                                                          stroke-linecap="square" stroke-width="2" stroke-dasharray="0"#}
+            {#                                                          class="apexcharts-bar-area" index="0"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 437.92427884615375 264.348L 437.92427884615375 213.1705574519231Q 442.3085937499999 209.78624254807693 446.6929086538461 213.1705574519231L 446.6929086538461 213.1705574519231L 446.6929086538461 264.348L 446.6929086538461 264.348z"#}
+            {#                                                          pathFrom="M 437.92427884615375 264.348L 437.92427884615375 264.348L 446.6929086538461 264.348L 446.6929086538461 264.348L 446.6929086538461 264.348L 437.92427884615375 264.348"#}
+            {#                                                          cy="211.47840000000002" cx="472.81971153846143" j="12"#}
+            {#                                                          val="50" barHeight="52.869600000000005"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                </g>#}
+            {#                                                <g id="SvgjsG1221" class="apexcharts-series" rel="2"#}
+            {#                                                   seriesName="Pending" data:realIndex="1">#}
+            {#                                                    <path id="SvgjsPath1223"#}
+            {#                                                          d="M 17.947716346153847 264.348L 17.947716346153847 241.72014145192307Q 22.33203125 238.3358265480769 26.716346153846153 241.72014145192307L 26.716346153846153 241.72014145192307L 26.716346153846153 264.348L 26.716346153846153 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 17.947716346153847 264.348L 17.947716346153847 241.72014145192307Q 22.33203125 238.3358265480769 26.716346153846153 241.72014145192307L 26.716346153846153 241.72014145192307L 26.716346153846153 264.348L 26.716346153846153 264.348z"#}
+            {#                                                          pathFrom="M 17.947716346153847 264.348L 17.947716346153847 264.348L 26.716346153846153 264.348L 26.716346153846153 264.348L 26.716346153846153 264.348L 17.947716346153847 264.348"#}
+            {#                                                          cy="240.027984" cx="52.84314903846154" j="0" val="23"#}
+            {#                                                          barHeight="24.320016000000003"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1224"#}
+            {#                                                          d="M 53.84314903846154 264.348L 53.84314903846154 221.6296934519231Q 58.22746394230769 218.24537854807693 62.61177884615384 221.6296934519231L 62.61177884615384 221.6296934519231L 62.61177884615384 264.348L 62.61177884615384 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 53.84314903846154 264.348L 53.84314903846154 221.6296934519231Q 58.22746394230769 218.24537854807693 62.61177884615384 221.6296934519231L 62.61177884615384 221.6296934519231L 62.61177884615384 264.348L 62.61177884615384 264.348z"#}
+            {#                                                          pathFrom="M 53.84314903846154 264.348L 53.84314903846154 264.348L 62.61177884615384 264.348L 62.61177884615384 264.348L 62.61177884615384 264.348L 53.84314903846154 264.348"#}
+            {#                                                          cy="219.93753600000002" cx="88.73858173076924" j="1" val="42"#}
+            {#                                                          barHeight="44.410464000000005"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1225"#}
+            {#                                                          d="M 89.73858173076924 264.348L 89.73858173076924 229.03143745192307Q 94.12289663461539 225.6471225480769 98.50721153846155 229.03143745192307L 98.50721153846155 229.03143745192307L 98.50721153846155 264.348L 98.50721153846155 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 89.73858173076924 264.348L 89.73858173076924 229.03143745192307Q 94.12289663461539 225.6471225480769 98.50721153846155 229.03143745192307L 98.50721153846155 229.03143745192307L 98.50721153846155 264.348L 98.50721153846155 264.348z"#}
+            {#                                                          pathFrom="M 89.73858173076924 264.348L 89.73858173076924 264.348L 98.50721153846155 264.348L 98.50721153846155 264.348L 98.50721153846155 264.348L 89.73858173076924 264.348"#}
+            {#                                                          cy="227.33928" cx="124.63401442307693" j="2" val="35"#}
+            {#                                                          barHeight="37.008720000000004"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1226"#}
+            {#                                                          d="M 125.63401442307693 264.348L 125.63401442307693 237.49057345192307Q 130.0183293269231 234.1062585480769 134.40264423076923 237.49057345192307L 134.40264423076923 237.49057345192307L 134.40264423076923 264.348L 134.40264423076923 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 125.63401442307693 264.348L 125.63401442307693 237.49057345192307Q 130.0183293269231 234.1062585480769 134.40264423076923 237.49057345192307L 134.40264423076923 237.49057345192307L 134.40264423076923 264.348L 134.40264423076923 264.348z"#}
+            {#                                                          pathFrom="M 125.63401442307693 264.348L 125.63401442307693 264.348L 134.40264423076923 264.348L 134.40264423076923 264.348L 134.40264423076923 264.348L 125.63401442307693 264.348"#}
+            {#                                                          cy="235.798416" cx="160.52944711538464" j="3" val="27"#}
+            {#                                                          barHeight="28.549584000000003"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1227"#}
+            {#                                                          d="M 161.52944711538464 264.348L 161.52944711538464 220.57230145192307Q 165.9137620192308 217.1879865480769 170.29807692307696 220.57230145192307L 170.29807692307696 220.57230145192307L 170.29807692307696 264.348L 170.29807692307696 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 161.52944711538464 264.348L 161.52944711538464 220.57230145192307Q 165.9137620192308 217.1879865480769 170.29807692307696 220.57230145192307L 170.29807692307696 220.57230145192307L 170.29807692307696 264.348L 170.29807692307696 264.348z"#}
+            {#                                                          pathFrom="M 161.52944711538464 264.348L 161.52944711538464 264.348L 170.29807692307696 264.348L 170.29807692307696 264.348L 170.29807692307696 264.348L 161.52944711538464 264.348"#}
+            {#                                                          cy="218.880144" cx="196.42487980769232" j="4" val="43"#}
+            {#                                                          barHeight="45.467856000000005"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1228"#}
+            {#                                                          d="M 197.42487980769232 264.348L 197.42487980769232 242.77753345192306Q 201.80919471153848 239.3932185480769 206.19350961538464 242.77753345192306L 206.19350961538464 242.77753345192306L 206.19350961538464 264.348L 206.19350961538464 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 197.42487980769232 264.348L 197.42487980769232 242.77753345192306Q 201.80919471153848 239.3932185480769 206.19350961538464 242.77753345192306L 206.19350961538464 242.77753345192306L 206.19350961538464 264.348L 206.19350961538464 264.348z"#}
+            {#                                                          pathFrom="M 197.42487980769232 264.348L 197.42487980769232 264.348L 206.19350961538464 264.348L 206.19350961538464 264.348L 206.19350961538464 264.348L 197.42487980769232 264.348"#}
+            {#                                                          cy="241.085376" cx="232.3203125" j="5" val="22"#}
+            {#                                                          barHeight="23.262624000000002"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1229"#}
+            {#                                                          d="M 233.3203125 264.348L 233.3203125 248.06449345192308Q 237.70462740384616 244.68017854807692 242.08894230769232 248.06449345192308L 242.08894230769232 248.06449345192308L 242.08894230769232 264.348L 242.08894230769232 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 233.3203125 264.348L 233.3203125 248.06449345192308Q 237.70462740384616 244.68017854807692 242.08894230769232 248.06449345192308L 242.08894230769232 248.06449345192308L 242.08894230769232 264.348L 242.08894230769232 264.348z"#}
+            {#                                                          pathFrom="M 233.3203125 264.348L 233.3203125 264.348L 242.08894230769232 264.348L 242.08894230769232 264.348L 242.08894230769232 264.348L 233.3203125 264.348"#}
+            {#                                                          cy="246.37233600000002" cx="268.2157451923077" j="6" val="17"#}
+            {#                                                          barHeight="17.975664000000002"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1230"#}
+            {#                                                          d="M 269.2157451923077 264.348L 269.2157451923077 233.26100545192307Q 273.6000600961538 229.8766905480769 277.984375 233.26100545192307L 277.984375 233.26100545192307L 277.984375 264.348L 277.984375 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 269.2157451923077 264.348L 269.2157451923077 233.26100545192307Q 273.6000600961538 229.8766905480769 277.984375 233.26100545192307L 277.984375 233.26100545192307L 277.984375 264.348L 277.984375 264.348z"#}
+            {#                                                          pathFrom="M 269.2157451923077 264.348L 269.2157451923077 264.348L 277.984375 264.348L 277.984375 264.348L 277.984375 264.348L 269.2157451923077 264.348"#}
+            {#                                                          cy="231.568848" cx="304.11117788461536" j="7" val="31"#}
+            {#                                                          barHeight="32.779152" barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1231"#}
+            {#                                                          d="M 305.11117788461536 264.348L 305.11117788461536 242.77753345192306Q 309.4954927884615 239.3932185480769 313.8798076923077 242.77753345192306L 313.8798076923077 242.77753345192306L 313.8798076923077 264.348L 313.8798076923077 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 305.11117788461536 264.348L 305.11117788461536 242.77753345192306Q 309.4954927884615 239.3932185480769 313.8798076923077 242.77753345192306L 313.8798076923077 242.77753345192306L 313.8798076923077 264.348L 313.8798076923077 264.348z"#}
+            {#                                                          pathFrom="M 305.11117788461536 264.348L 305.11117788461536 264.348L 313.8798076923077 264.348L 313.8798076923077 264.348L 313.8798076923077 264.348L 305.11117788461536 264.348"#}
+            {#                                                          cy="241.085376" cx="340.00661057692304" j="8" val="22"#}
+            {#                                                          barHeight="23.262624000000002"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1232"#}
+            {#                                                          d="M 341.00661057692304 264.348L 341.00661057692304 242.77753345192306Q 345.39092548076917 239.3932185480769 349.77524038461536 242.77753345192306L 349.77524038461536 242.77753345192306L 349.77524038461536 264.348L 349.77524038461536 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 341.00661057692304 264.348L 341.00661057692304 242.77753345192306Q 345.39092548076917 239.3932185480769 349.77524038461536 242.77753345192306L 349.77524038461536 242.77753345192306L 349.77524038461536 264.348L 349.77524038461536 264.348z"#}
+            {#                                                          pathFrom="M 341.00661057692304 264.348L 341.00661057692304 264.348L 349.77524038461536 264.348L 349.77524038461536 264.348L 349.77524038461536 264.348L 341.00661057692304 264.348"#}
+            {#                                                          cy="241.085376" cx="375.9020432692307" j="9" val="22"#}
+            {#                                                          barHeight="23.262624000000002"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1233"#}
+            {#                                                          d="M 376.9020432692307 264.348L 376.9020432692307 253.35145345192308Q 381.28635817307685 249.96713854807692 385.67067307692304 253.35145345192308L 385.67067307692304 253.35145345192308L 385.67067307692304 264.348L 385.67067307692304 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 376.9020432692307 264.348L 376.9020432692307 253.35145345192308Q 381.28635817307685 249.96713854807692 385.67067307692304 253.35145345192308L 385.67067307692304 253.35145345192308L 385.67067307692304 264.348L 385.67067307692304 264.348z"#}
+            {#                                                          pathFrom="M 376.9020432692307 264.348L 376.9020432692307 264.348L 385.67067307692304 264.348L 385.67067307692304 264.348L 385.67067307692304 264.348L 376.9020432692307 264.348"#}
+            {#                                                          cy="251.659296" cx="411.7974759615384" j="10" val="12"#}
+            {#                                                          barHeight="12.688704000000001"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1234"#}
+            {#                                                          d="M 412.7974759615384 264.348L 412.7974759615384 249.12188545192308Q 417.1817908653845 245.73757054807692 421.5661057692307 249.12188545192308L 421.5661057692307 249.12188545192308L 421.5661057692307 264.348L 421.5661057692307 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 412.7974759615384 264.348L 412.7974759615384 249.12188545192308Q 417.1817908653845 245.73757054807692 421.5661057692307 249.12188545192308L 421.5661057692307 249.12188545192308L 421.5661057692307 264.348L 421.5661057692307 264.348z"#}
+            {#                                                          pathFrom="M 412.7974759615384 264.348L 412.7974759615384 264.348L 421.5661057692307 264.348L 421.5661057692307 264.348L 421.5661057692307 264.348L 412.7974759615384 264.348"#}
+            {#                                                          cy="247.429728" cx="447.6929086538461" j="11" val="16"#}
+            {#                                                          barHeight="16.918272" barWidth="10.768629807692307"></path>#}
+            {#                                                    <path id="SvgjsPath1235"#}
+            {#                                                          d="M 448.6929086538461 264.348L 448.6929086538461 181.44879745192307Q 453.0772235576922 178.0644825480769 457.4615384615384 181.44879745192307L 457.4615384615384 181.44879745192307L 457.4615384615384 264.348L 457.4615384615384 264.348z"#}
+            {#                                                          fill="rgba(253,166,0,1)" fill-opacity="1" stroke="transparent"#}
+            {#                                                          stroke-opacity="1" stroke-linecap="square" stroke-width="2"#}
+            {#                                                          stroke-dasharray="0" class="apexcharts-bar-area" index="1"#}
+            {#                                                          clip-path="url(#gridRectMaskyds3vwhf)"#}
+            {#                                                          pathTo="M 448.6929086538461 264.348L 448.6929086538461 181.44879745192307Q 453.0772235576922 178.0644825480769 457.4615384615384 181.44879745192307L 457.4615384615384 181.44879745192307L 457.4615384615384 264.348L 457.4615384615384 264.348z"#}
+            {#                                                          pathFrom="M 448.6929086538461 264.348L 448.6929086538461 264.348L 457.4615384615384 264.348L 457.4615384615384 264.348L 457.4615384615384 264.348L 448.6929086538461 264.348"#}
+            {#                                                          cy="179.75664" cx="483.58834134615375" j="12" val="80"#}
+            {#                                                          barHeight="84.59136000000001"#}
+            {#                                                          barWidth="10.768629807692307"></path>#}
+            {#                                                </g>#}
+            {#                                                <g id="SvgjsG1207" class="apexcharts-datalabels" data:realIndex="0"></g>#}
+            {#                                                <g id="SvgjsG1222" class="apexcharts-datalabels" data:realIndex="1"></g>#}
+            {#                                            </g>#}
+            {#                                            <line id="SvgjsLine1307" x1="0" y1="0" x2="466.640625" y2="0"#}
+            {#                                                  stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1"#}
+            {#                                                  class="apexcharts-ycrosshairs"></line>#}
+            {#                                            <line id="SvgjsLine1308" x1="0" y1="0" x2="466.640625" y2="0"#}
+            {#                                                  stroke-dasharray="0" stroke-width="0"#}
+            {#                                                  class="apexcharts-ycrosshairs-hidden"></line>#}
+            {#                                            <g id="SvgjsG1309" class="apexcharts-yaxis-annotations"></g>#}
+            {#                                            <g id="SvgjsG1310" class="apexcharts-xaxis-annotations"></g>#}
+            {#                                            <g id="SvgjsG1311" class="apexcharts-point-annotations"></g>#}
+            {#                                        </g>#}
+            {#                                        <g id="SvgjsG1269" class="apexcharts-yaxis" rel="0"#}
+            {#                                           transform="translate(22.359375, 0)">#}
+            {#                                            <g id="SvgjsG1270" class="apexcharts-yaxis-texts-g">#}
+            {#                                                <text id="SvgjsText1271" font-family="Poppins, sans-serif" x="20"#}
+            {#                                                      y="31.5" text-anchor="end" dominant-baseline="auto"#}
+            {#                                                      font-size="11px" font-weight="400" fill="#373d3f"#}
+            {#                                                      class="apexcharts-text apexcharts-yaxis-label "#}
+            {#                                                      style="font-family: Poppins, sans-serif;">#}
+            {#                                                    <tspan id="SvgjsTspan1272">250</tspan>#}
+            {#                                                </text>#}
+            {#                                                <text id="SvgjsText1273" font-family="Poppins, sans-serif" x="20"#}
+            {#                                                      y="84.3696" text-anchor="end" dominant-baseline="auto"#}
+            {#                                                      font-size="11px" font-weight="400" fill="#373d3f"#}
+            {#                                                      class="apexcharts-text apexcharts-yaxis-label "#}
+            {#                                                      style="font-family: Poppins, sans-serif;">#}
+            {#                                                    <tspan id="SvgjsTspan1274">200</tspan>#}
+            {#                                                </text>#}
+            {#                                                <text id="SvgjsText1275" font-family="Poppins, sans-serif" x="20"#}
+            {#                                                      y="137.2392" text-anchor="end" dominant-baseline="auto"#}
+            {#                                                      font-size="11px" font-weight="400" fill="#373d3f"#}
+            {#                                                      class="apexcharts-text apexcharts-yaxis-label "#}
+            {#                                                      style="font-family: Poppins, sans-serif;">#}
+            {#                                                    <tspan id="SvgjsTspan1276">150</tspan>#}
+            {#                                                </text>#}
+            {#                                                <text id="SvgjsText1277" font-family="Poppins, sans-serif" x="20"#}
+            {#                                                      y="190.10880000000003" text-anchor="end" dominant-baseline="auto"#}
+            {#                                                      font-size="11px" font-weight="400" fill="#373d3f"#}
+            {#                                                      class="apexcharts-text apexcharts-yaxis-label "#}
+            {#                                                      style="font-family: Poppins, sans-serif;">#}
+            {#                                                    <tspan id="SvgjsTspan1278">100</tspan>#}
+            {#                                                </text>#}
+            {#                                                <text id="SvgjsText1279" font-family="Poppins, sans-serif" x="20"#}
+            {#                                                      y="242.97840000000002" text-anchor="end" dominant-baseline="auto"#}
+            {#                                                      font-size="11px" font-weight="400" fill="#373d3f"#}
+            {#                                                      class="apexcharts-text apexcharts-yaxis-label "#}
+            {#                                                      style="font-family: Poppins, sans-serif;">#}
+            {#                                                    <tspan id="SvgjsTspan1280">50</tspan>#}
+            {#                                                </text>#}
+            {#                                                <text id="SvgjsText1281" font-family="Poppins, sans-serif" x="20"#}
+            {#                                                      y="295.848" text-anchor="end" dominant-baseline="auto"#}
+            {#                                                      font-size="11px" font-weight="400" fill="#373d3f"#}
+            {#                                                      class="apexcharts-text apexcharts-yaxis-label "#}
+            {#                                                      style="font-family: Poppins, sans-serif;">#}
+            {#                                                    <tspan id="SvgjsTspan1282">0</tspan>#}
+            {#                                                </text>#}
+            {#                                            </g>#}
+            {#                                            <g id="SvgjsG1283" class="apexcharts-yaxis-title">#}
+            {#                                                <text id="SvgjsText1284" font-family="Poppins, sans-serif"#}
+            {#                                                      x="27.6015625" y="162.174" text-anchor="end"#}
+            {#                                                      dominant-baseline="auto" font-size="11px" font-weight="900"#}
+            {#                                                      fill="#373d3f"#}
+            {#                                                      class="apexcharts-text apexcharts-yaxis-title-text "#}
+            {#                                                      style="font-family: Poppins, sans-serif;"#}
+            {#                                                      transform="rotate(-90 -13.3515625 157.6796875)">$ (thousands)#}
+            {#                                                </text>#}
+            {#                                            </g>#}
+            {#                                        </g>#}
+            {#                                        <g id="SvgjsG1194" class="apexcharts-annotations"></g>#}
+            {#                                    </svg>#}
+            {#                                    <div class="apexcharts-tooltip apexcharts-theme-light">#}
+            {#                                        <div class="apexcharts-tooltip-title"#}
+            {#                                             style="font-family: Poppins, sans-serif; font-size: 12px;"></div>#}
+            {#                                        <div class="apexcharts-tooltip-series-group" style="order: 1;"><span#}
+            {#                                                class="apexcharts-tooltip-marker"#}
+            {#                                                style="background-color: rgb(118, 56, 255);"></span>#}
+            {#                                            <div class="apexcharts-tooltip-text"#}
+            {#                                                 style="font-family: Poppins, sans-serif; font-size: 12px;">#}
+            {#                                                <div class="apexcharts-tooltip-y-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-value"></span></div>#}
+            {#                                                <div class="apexcharts-tooltip-z-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-value"></span></div>#}
+            {#                                            </div>#}
+            {#                                        </div>#}
+            {#                                        <div class="apexcharts-tooltip-series-group" style="order: 2;"><span#}
+            {#                                                class="apexcharts-tooltip-marker"#}
+            {#                                                style="background-color: rgb(253, 166, 0);"></span>#}
+            {#                                            <div class="apexcharts-tooltip-text"#}
+            {#                                                 style="font-family: Poppins, sans-serif; font-size: 12px;">#}
+            {#                                                <div class="apexcharts-tooltip-y-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-value"></span></div>#}
+            {#                                                <div class="apexcharts-tooltip-z-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-value"></span></div>#}
+            {#                                            </div>#}
+            {#                                        </div>#}
+            {#                                    </div>#}
+            {#                                    <div class="apexcharts-yaxistooltip apexcharts-yaxistooltip-0 apexcharts-yaxistooltip-left apexcharts-theme-light">#}
+            {#                                        <div class="apexcharts-yaxistooltip-text"></div>#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                            <div class="resize-triggers">#}
+            {#                                <div class="expand-trigger">#}
+            {#                                    <div style="width: 578px; height: 480px;"></div>#}
+            {#                                </div>#}
+            {#                                <div class="contract-trigger"></div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#                <div class="col-xl-5 d-flex">#}
+            {#                    <div class="card flex-fill">#}
+            {#                        <div class="card-header">#}
+            {#                            <div class="d-flex justify-content-between align-items-center">#}
+            {#                                <h5 class="card-title">Invoice Analytics</h5>#}
+            {#                                <div class="dropdown" data-toggle="dropdown">#}
+            {#                                    <a href="javascript:void(0);" class="btn btn-white btn-sm dropdown-toggle"#}
+            {#                                       role="button" data-toggle="dropdown">#}
+            {#                                        Monthly#}
+            {#                                    </a>#}
+            {#                                    <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                        <a href="javascript:void(0);" class="dropdown-item">Weekly</a>#}
+            {#                                        <a href="javascript:void(0);" class="dropdown-item">Monthly</a>#}
+            {#                                        <a href="javascript:void(0);" class="dropdown-item">Yearly</a>#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                        <div class="card-body">#}
+            {#                            <div id="invoice_chart" style="min-height: 350.7px;">#}
+            {#                                <div id="apexchartstqoipctt"#}
+            {#                                     class="apexcharts-canvas apexchartstqoipctt apexcharts-theme-light"#}
+            {#                                     style="width: 529px; height: 350.7px;">#}
+            {#                                    <svg id="SvgjsSvg1312" width="529" height="350.70000000000005"#}
+            {#                                         xmlns="http://www.w3.org/2000/svg" version="1.1"#}
+            {#                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"#}
+            {#                                         class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)"#}
+            {#                                         style="background: transparent;">#}
+            {#                                        <g id="SvgjsG1314" class="apexcharts-inner apexcharts-graphical"#}
+            {#                                           transform="translate(102.5, 0)">#}
+            {#                                            <defs id="SvgjsDefs1313">#}
+            {#                                                <clipPath id="gridRectMasktqoipctt">#}
+            {#                                                    <rect id="SvgjsRect1316" width="332" height="350" x="-3" y="-1"#}
+            {#                                                          rx="0" ry="0" opacity="1" stroke-width="0" stroke="none"#}
+            {#                                                          stroke-dasharray="0" fill="#fff"></rect>#}
+            {#                                                </clipPath>#}
+            {#                                                <clipPath id="gridRectMarkerMasktqoipctt">#}
+            {#                                                    <rect id="SvgjsRect1317" width="330" height="352" x="-2" y="-2"#}
+            {#                                                          rx="0" ry="0" opacity="1" stroke-width="0" stroke="none"#}
+            {#                                                          stroke-dasharray="0" fill="#fff"></rect>#}
+            {#                                                </clipPath>#}
+            {#                                                <filter id="SvgjsFilter1326" filterUnits="userSpaceOnUse" width="200%"#}
+            {#                                                        height="200%" x="-50%" y="-50%">#}
+            {#                                                    <feFlood id="SvgjsFeFlood1327" flood-color="#000000"#}
+            {#                                                             flood-opacity="0.45" result="SvgjsFeFlood1327Out"#}
+            {#                                                             in="SourceGraphic"></feFlood>#}
+            {#                                                    <feComposite id="SvgjsFeComposite1328" in="SvgjsFeFlood1327Out"#}
+            {#                                                                 in2="SourceAlpha" operator="in"#}
+            {#                                                                 result="SvgjsFeComposite1328Out"></feComposite>#}
+            {#                                                    <feOffset id="SvgjsFeOffset1329" dx="1" dy="1"#}
+            {#                                                              result="SvgjsFeOffset1329Out"#}
+            {#                                                              in="SvgjsFeComposite1328Out"></feOffset>#}
+            {#                                                    <feGaussianBlur id="SvgjsFeGaussianBlur1330" stdDeviation="1 "#}
+            {#                                                                    result="SvgjsFeGaussianBlur1330Out"#}
+            {#                                                                    in="SvgjsFeOffset1329Out"></feGaussianBlur>#}
+            {#                                                    <feMerge id="SvgjsFeMerge1331" result="SvgjsFeMerge1331Out"#}
+            {#                                                             in="SourceGraphic">#}
+            {#                                                        <feMergeNode id="SvgjsFeMergeNode1332"#}
+            {#                                                                     in="SvgjsFeGaussianBlur1330Out"></feMergeNode>#}
+            {#                                                        <feMergeNode id="SvgjsFeMergeNode1333"#}
+            {#                                                                     in="[object Arguments]"></feMergeNode>#}
+            {#                                                    </feMerge>#}
+            {#                                                    <feBlend id="SvgjsFeBlend1334" in="SourceGraphic"#}
+            {#                                                             in2="SvgjsFeMerge1331Out" mode="normal"#}
+            {#                                                             result="SvgjsFeBlend1334Out"></feBlend>#}
+            {#                                                </filter>#}
+            {#                                                <filter id="SvgjsFilter1339" filterUnits="userSpaceOnUse" width="200%"#}
+            {#                                                        height="200%" x="-50%" y="-50%">#}
+            {#                                                    <feFlood id="SvgjsFeFlood1340" flood-color="#000000"#}
+            {#                                                             flood-opacity="0.45" result="SvgjsFeFlood1340Out"#}
+            {#                                                             in="SourceGraphic"></feFlood>#}
+            {#                                                    <feComposite id="SvgjsFeComposite1341" in="SvgjsFeFlood1340Out"#}
+            {#                                                                 in2="SourceAlpha" operator="in"#}
+            {#                                                                 result="SvgjsFeComposite1341Out"></feComposite>#}
+            {#                                                    <feOffset id="SvgjsFeOffset1342" dx="1" dy="1"#}
+            {#                                                              result="SvgjsFeOffset1342Out"#}
+            {#                                                              in="SvgjsFeComposite1341Out"></feOffset>#}
+            {#                                                    <feGaussianBlur id="SvgjsFeGaussianBlur1343" stdDeviation="1 "#}
+            {#                                                                    result="SvgjsFeGaussianBlur1343Out"#}
+            {#                                                                    in="SvgjsFeOffset1342Out"></feGaussianBlur>#}
+            {#                                                    <feMerge id="SvgjsFeMerge1344" result="SvgjsFeMerge1344Out"#}
+            {#                                                             in="SourceGraphic">#}
+            {#                                                        <feMergeNode id="SvgjsFeMergeNode1345"#}
+            {#                                                                     in="SvgjsFeGaussianBlur1343Out"></feMergeNode>#}
+            {#                                                        <feMergeNode id="SvgjsFeMergeNode1346"#}
+            {#                                                                     in="[object Arguments]"></feMergeNode>#}
+            {#                                                    </feMerge>#}
+            {#                                                    <feBlend id="SvgjsFeBlend1347" in="SourceGraphic"#}
+            {#                                                             in2="SvgjsFeMerge1344Out" mode="normal"#}
+            {#                                                             result="SvgjsFeBlend1347Out"></feBlend>#}
+            {#                                                </filter>#}
+            {#                                                <filter id="SvgjsFilter1352" filterUnits="userSpaceOnUse" width="200%"#}
+            {#                                                        height="200%" x="-50%" y="-50%">#}
+            {#                                                    <feFlood id="SvgjsFeFlood1353" flood-color="#000000"#}
+            {#                                                             flood-opacity="0.45" result="SvgjsFeFlood1353Out"#}
+            {#                                                             in="SourceGraphic"></feFlood>#}
+            {#                                                    <feComposite id="SvgjsFeComposite1354" in="SvgjsFeFlood1353Out"#}
+            {#                                                                 in2="SourceAlpha" operator="in"#}
+            {#                                                                 result="SvgjsFeComposite1354Out"></feComposite>#}
+            {#                                                    <feOffset id="SvgjsFeOffset1355" dx="1" dy="1"#}
+            {#                                                              result="SvgjsFeOffset1355Out"#}
+            {#                                                              in="SvgjsFeComposite1354Out"></feOffset>#}
+            {#                                                    <feGaussianBlur id="SvgjsFeGaussianBlur1356" stdDeviation="1 "#}
+            {#                                                                    result="SvgjsFeGaussianBlur1356Out"#}
+            {#                                                                    in="SvgjsFeOffset1355Out"></feGaussianBlur>#}
+            {#                                                    <feMerge id="SvgjsFeMerge1357" result="SvgjsFeMerge1357Out"#}
+            {#                                                             in="SourceGraphic">#}
+            {#                                                        <feMergeNode id="SvgjsFeMergeNode1358"#}
+            {#                                                                     in="SvgjsFeGaussianBlur1356Out"></feMergeNode>#}
+            {#                                                        <feMergeNode id="SvgjsFeMergeNode1359"#}
+            {#                                                                     in="[object Arguments]"></feMergeNode>#}
+            {#                                                    </feMerge>#}
+            {#                                                    <feBlend id="SvgjsFeBlend1360" in="SourceGraphic"#}
+            {#                                                             in2="SvgjsFeMerge1357Out" mode="normal"#}
+            {#                                                             result="SvgjsFeBlend1360Out"></feBlend>#}
+            {#                                                </filter>#}
+            {#                                                <filter id="SvgjsFilter1365" filterUnits="userSpaceOnUse" width="200%"#}
+            {#                                                        height="200%" x="-50%" y="-50%">#}
+            {#                                                    <feFlood id="SvgjsFeFlood1366" flood-color="#000000"#}
+            {#                                                             flood-opacity="0.45" result="SvgjsFeFlood1366Out"#}
+            {#                                                             in="SourceGraphic"></feFlood>#}
+            {#                                                    <feComposite id="SvgjsFeComposite1367" in="SvgjsFeFlood1366Out"#}
+            {#                                                                 in2="SourceAlpha" operator="in"#}
+            {#                                                                 result="SvgjsFeComposite1367Out"></feComposite>#}
+            {#                                                    <feOffset id="SvgjsFeOffset1368" dx="1" dy="1"#}
+            {#                                                              result="SvgjsFeOffset1368Out"#}
+            {#                                                              in="SvgjsFeComposite1367Out"></feOffset>#}
+            {#                                                    <feGaussianBlur id="SvgjsFeGaussianBlur1369" stdDeviation="1 "#}
+            {#                                                                    result="SvgjsFeGaussianBlur1369Out"#}
+            {#                                                                    in="SvgjsFeOffset1368Out"></feGaussianBlur>#}
+            {#                                                    <feMerge id="SvgjsFeMerge1370" result="SvgjsFeMerge1370Out"#}
+            {#                                                             in="SourceGraphic">#}
+            {#                                                        <feMergeNode id="SvgjsFeMergeNode1371"#}
+            {#                                                                     in="SvgjsFeGaussianBlur1369Out"></feMergeNode>#}
+            {#                                                        <feMergeNode id="SvgjsFeMergeNode1372"#}
+            {#                                                                     in="[object Arguments]"></feMergeNode>#}
+            {#                                                    </feMerge>#}
+            {#                                                    <feBlend id="SvgjsFeBlend1373" in="SourceGraphic"#}
+            {#                                                             in2="SvgjsFeMerge1370Out" mode="normal"#}
+            {#                                                             result="SvgjsFeBlend1373Out"></feBlend>#}
+            {#                                                </filter>#}
+            {#                                            </defs>#}
+            {#                                            <g id="SvgjsG1318" class="apexcharts-pie">#}
+            {#                                                <g id="SvgjsG1319" transform="translate(0, 0) scale(1)">#}
+            {#                                                    <circle id="SvgjsCircle1320" r="106.44146341463416" cx="163"#}
+            {#                                                            cy="174" fill="transparent"></circle>#}
+            {#                                                    <g id="SvgjsG1321" class="apexcharts-slices">#}
+            {#                                                        <g id="SvgjsG1322"#}
+            {#                                                           class="apexcharts-series apexcharts-pie-series"#}
+            {#                                                           seriesName="Paid" rel="1" data:realIndex="0">#}
+            {#                                                            <path id="SvgjsPath1323"#}
+            {#                                                                  d="M 163 10.243902439024367 A 163.75609756097563 163.75609756097563 0 0 1 223.2826401640226 326.25656893301755 L 202.1837161066147 272.96676980646146 A 106.44146341463416 106.44146341463416 0 0 0 163 67.55853658536584 L 163 10.243902439024367 z"#}
+            {#                                                                  fill="rgba(118,56,255,1)" fill-opacity="1"#}
+            {#                                                                  stroke-opacity="1" stroke-linecap="butt"#}
+            {#                                                                  stroke-width="2" stroke-dasharray="0"#}
+            {#                                                                  class="apexcharts-pie-area apexcharts-donut-slice-0"#}
+            {#                                                                  index="0" j="0" data:angle="158.4" data:startAngle="0"#}
+            {#                                                                  data:strokeWidth="2" data:value="55"#}
+            {#                                                                  data:pathOrig="M 163 10.243902439024367 A 163.75609756097563 163.75609756097563 0 0 1 223.2826401640226 326.25656893301755 L 202.1837161066147 272.96676980646146 A 106.44146341463416 106.44146341463416 0 0 0 163 67.55853658536584 L 163 10.243902439024367 z"#}
+            {#                                                                  stroke="#ffffff"></path>#}
+            {#                                                        </g>#}
+            {#                                                        <g id="SvgjsG1335"#}
+            {#                                                           class="apexcharts-series apexcharts-pie-series"#}
+            {#                                                           seriesName="Unpaid" rel="2" data:realIndex="1">#}
+            {#                                                            <path id="SvgjsPath1336"#}
+            {#                                                                  d="M 223.2826401640226 326.25656893301755 A 163.75609756097563 163.75609756097563 0 0 1 -0.432962308961379 163.71766955805342 L 56.768574499175116 167.31648521273473 A 106.44146341463416 106.44146341463416 0 0 0 202.1837161066147 272.96676980646146 L 223.2826401640226 326.25656893301755 z"#}
+            {#                                                                  fill="rgba(255,115,123,1)" fill-opacity="1"#}
+            {#                                                                  stroke-opacity="1" stroke-linecap="butt"#}
+            {#                                                                  stroke-width="2" stroke-dasharray="0"#}
+            {#                                                                  class="apexcharts-pie-area apexcharts-donut-slice-1"#}
+            {#                                                                  index="0" j="1" data:angle="115.20000000000002"#}
+            {#                                                                  data:startAngle="158.4" data:strokeWidth="2"#}
+            {#                                                                  data:value="40"#}
+            {#                                                                  data:pathOrig="M 223.2826401640226 326.25656893301755 A 163.75609756097563 163.75609756097563 0 0 1 -0.432962308961379 163.71766955805342 L 56.768574499175116 167.31648521273473 A 106.44146341463416 106.44146341463416 0 0 0 202.1837161066147 272.96676980646146 L 223.2826401640226 326.25656893301755 z"#}
+            {#                                                                  stroke="#ffffff"></path>#}
+            {#                                                        </g>#}
+            {#                                                        <g id="SvgjsG1348"#}
+            {#                                                           class="apexcharts-series apexcharts-pie-series"#}
+            {#                                                           seriesName="Overdue" rel="3" data:realIndex="2">#}
+            {#                                                            <path id="SvgjsPath1349"#}
+            {#                                                                  d="M -0.432962308961379 163.71766955805342 A 163.75609756097563 163.75609756097563 0 0 1 84.10989834344119 30.499437809402338 L 111.72143392323677 80.72463457611153 A 106.44146341463416 106.44146341463416 0 0 0 56.768574499175116 167.31648521273473 L -0.432962308961379 163.71766955805342 z"#}
+            {#                                                                  fill="rgba(253,166,0,1)" fill-opacity="1"#}
+            {#                                                                  stroke-opacity="1" stroke-linecap="butt"#}
+            {#                                                                  stroke-width="2" stroke-dasharray="0"#}
+            {#                                                                  class="apexcharts-pie-area apexcharts-donut-slice-2"#}
+            {#                                                                  index="0" j="2" data:angle="57.60000000000002"#}
+            {#                                                                  data:startAngle="273.6" data:strokeWidth="2"#}
+            {#                                                                  data:value="20"#}
+            {#                                                                  data:pathOrig="M -0.432962308961379 163.71766955805342 A 163.75609756097563 163.75609756097563 0 0 1 84.10989834344119 30.499437809402338 L 111.72143392323677 80.72463457611153 A 106.44146341463416 106.44146341463416 0 0 0 56.768574499175116 167.31648521273473 L -0.432962308961379 163.71766955805342 z"#}
+            {#                                                                  stroke="#ffffff"></path>#}
+            {#                                                        </g>#}
+            {#                                                        <g id="SvgjsG1361"#}
+            {#                                                           class="apexcharts-series apexcharts-pie-series"#}
+            {#                                                           seriesName="Draft" rel="4" data:realIndex="3">#}
+            {#                                                            <path id="SvgjsPath1362"#}
+            {#                                                                  d="M 84.10989834344119 30.499437809402338 A 163.75609756097563 163.75609756097563 0 0 1 162.9714191694185 10.24390493317236 L 162.98142246012205 67.55853820656203 A 106.44146341463416 106.44146341463416 0 0 0 111.72143392323677 80.72463457611153 L 84.10989834344119 30.499437809402338 z"#}
+            {#                                                                  fill="rgba(30,193,176,1)" fill-opacity="1"#}
+            {#                                                                  stroke-opacity="1" stroke-linecap="butt"#}
+            {#                                                                  stroke-width="2" stroke-dasharray="0"#}
+            {#                                                                  class="apexcharts-pie-area apexcharts-donut-slice-3"#}
+            {#                                                                  index="0" j="3" data:angle="28.80000000000001"#}
+            {#                                                                  data:startAngle="331.20000000000005"#}
+            {#                                                                  data:strokeWidth="2" data:value="10"#}
+            {#                                                                  data:pathOrig="M 84.10989834344119 30.499437809402338 A 163.75609756097563 163.75609756097563 0 0 1 162.9714191694185 10.24390493317236 L 162.98142246012205 67.55853820656203 A 106.44146341463416 106.44146341463416 0 0 0 111.72143392323677 80.72463457611153 L 84.10989834344119 30.499437809402338 z"#}
+            {#                                                                  stroke="#ffffff"></path>#}
+            {#                                                        </g>#}
+            {#                                                        <g id="SvgjsG1324" class="apexcharts-datalabels">#}
+            {#                                                            <text id="SvgjsText1325" font-family="Poppins, sans-serif"#}
+            {#                                                                  x="295.7058096621645" y="148.6850129132669"#}
+            {#                                                                  text-anchor="middle" dominant-baseline="auto"#}
+            {#                                                                  font-size="12px" font-weight="600" fill="#ffffff"#}
+            {#                                                                  class="apexcharts-text apexcharts-pie-label"#}
+            {#                                                                  filter="url(#SvgjsFilter1326)"#}
+            {#                                                                  style="font-family: Poppins, sans-serif;">44.0%#}
+            {#                                                            </text>#}
+            {#                                                        </g>#}
+            {#                                                        <g id="SvgjsG1337" class="apexcharts-datalabels">#}
+            {#                                                            <text id="SvgjsText1338" font-family="Poppins, sans-serif"#}
+            {#                                                                  x="83.59092922657017" y="283.2972093339647"#}
+            {#                                                                  text-anchor="middle" dominant-baseline="auto"#}
+            {#                                                                  font-size="12px" font-weight="600" fill="#ffffff"#}
+            {#                                                                  class="apexcharts-text apexcharts-pie-label"#}
+            {#                                                                  filter="url(#SvgjsFilter1339)"#}
+            {#                                                                  style="font-family: Poppins, sans-serif;">32.0%#}
+            {#                                                            </text>#}
+            {#                                                        </g>#}
+            {#                                                        <g id="SvgjsG1350" class="apexcharts-datalabels">#}
+            {#                                                            <text id="SvgjsText1351" font-family="Poppins, sans-serif"#}
+            {#                                                                  x="48.93232693287959" y="101.61045344564847"#}
+            {#                                                                  text-anchor="middle" dominant-baseline="auto"#}
+            {#                                                                  font-size="12px" font-weight="600" fill="#ffffff"#}
+            {#                                                                  class="apexcharts-text apexcharts-pie-label"#}
+            {#                                                                  filter="url(#SvgjsFilter1352)"#}
+            {#                                                                  style="font-family: Poppins, sans-serif;">16.0%#}
+            {#                                                            </text>#}
+            {#                                                        </g>#}
+            {#                                                        <g id="SvgjsG1363" class="apexcharts-datalabels">#}
+            {#                                                            <text id="SvgjsText1364" font-family="Poppins, sans-serif"#}
+            {#                                                                  x="129.40229952437835" y="43.14559613049889"#}
+            {#                                                                  text-anchor="middle" dominant-baseline="auto"#}
+            {#                                                                  font-size="12px" font-weight="600" fill="#ffffff"#}
+            {#                                                                  class="apexcharts-text apexcharts-pie-label"#}
+            {#                                                                  filter="url(#SvgjsFilter1365)"#}
+            {#                                                                  style="font-family: Poppins, sans-serif;">8.0%#}
+            {#                                                            </text>#}
+            {#                                                        </g>#}
+            {#                                                    </g>#}
+            {#                                                </g>#}
+            {#                                            </g>#}
+            {#                                            <line id="SvgjsLine1374" x1="0" y1="0" x2="326" y2="0" stroke="#b6b6b6"#}
+            {#                                                  stroke-dasharray="0" stroke-width="1"#}
+            {#                                                  class="apexcharts-ycrosshairs"></line>#}
+            {#                                            <line id="SvgjsLine1375" x1="0" y1="0" x2="326" y2="0" stroke-dasharray="0"#}
+            {#                                                  stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line>#}
+            {#                                        </g>#}
+            {#                                        <g id="SvgjsG1315" class="apexcharts-annotations"></g>#}
+            {#                                    </svg>#}
+            {#                                    <div class="apexcharts-legend"></div>#}
+            {#                                    <div class="apexcharts-tooltip apexcharts-theme-dark">#}
+            {#                                        <div class="apexcharts-tooltip-series-group" style="order: 1;"><span#}
+            {#                                                class="apexcharts-tooltip-marker"#}
+            {#                                                style="background-color: rgb(118, 56, 255);"></span>#}
+            {#                                            <div class="apexcharts-tooltip-text"#}
+            {#                                                 style="font-family: Poppins, sans-serif; font-size: 12px;">#}
+            {#                                                <div class="apexcharts-tooltip-y-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-value"></span></div>#}
+            {#                                                <div class="apexcharts-tooltip-z-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-value"></span></div>#}
+            {#                                            </div>#}
+            {#                                        </div>#}
+            {#                                        <div class="apexcharts-tooltip-series-group" style="order: 2;"><span#}
+            {#                                                class="apexcharts-tooltip-marker"#}
+            {#                                                style="background-color: rgb(255, 115, 123);"></span>#}
+            {#                                            <div class="apexcharts-tooltip-text"#}
+            {#                                                 style="font-family: Poppins, sans-serif; font-size: 12px;">#}
+            {#                                                <div class="apexcharts-tooltip-y-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-value"></span></div>#}
+            {#                                                <div class="apexcharts-tooltip-z-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-value"></span></div>#}
+            {#                                            </div>#}
+            {#                                        </div>#}
+            {#                                        <div class="apexcharts-tooltip-series-group" style="order: 3;"><span#}
+            {#                                                class="apexcharts-tooltip-marker"#}
+            {#                                                style="background-color: rgb(253, 166, 0);"></span>#}
+            {#                                            <div class="apexcharts-tooltip-text"#}
+            {#                                                 style="font-family: Poppins, sans-serif; font-size: 12px;">#}
+            {#                                                <div class="apexcharts-tooltip-y-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-value"></span></div>#}
+            {#                                                <div class="apexcharts-tooltip-z-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-value"></span></div>#}
+            {#                                            </div>#}
+            {#                                        </div>#}
+            {#                                        <div class="apexcharts-tooltip-series-group" style="order: 4;"><span#}
+            {#                                                class="apexcharts-tooltip-marker"#}
+            {#                                                style="background-color: rgb(30, 193, 176);"></span>#}
+            {#                                            <div class="apexcharts-tooltip-text"#}
+            {#                                                 style="font-family: Poppins, sans-serif; font-size: 12px;">#}
+            {#                                                <div class="apexcharts-tooltip-y-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-value"></span></div>#}
+            {#                                                <div class="apexcharts-tooltip-z-group"><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-label"></span><span#}
+            {#                                                        class="apexcharts-tooltip-text-z-value"></span></div>#}
+            {#                                            </div>#}
+            {#                                        </div>#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                            <div class="text-center text-muted">#}
+            {#                                <div class="row">#}
+            {#                                    <div class="col-4">#}
+            {#                                        <div class="mt-4">#}
+            {#                                            <p class="mb-2 text-truncate"><i#}
+            {#                                                    class="fas fa-circle text-primary mr-1"></i> Invoiced</p>#}
+            {#                                            <h5>$ 2,132</h5>#}
+            {#                                        </div>#}
+            {#                                    </div>#}
+            {#                                    <div class="col-4">#}
+            {#                                        <div class="mt-4">#}
+            {#                                            <p class="mb-2 text-truncate"><i#}
+            {#                                                    class="fas fa-circle text-success mr-1"></i> Received</p>#}
+            {#                                            <h5>$ 1,763</h5>#}
+            {#                                        </div>#}
+            {#                                    </div>#}
+            {#                                    <div class="col-4">#}
+            {#                                        <div class="mt-4">#}
+            {#                                            <p class="mb-2 text-truncate"><i class="fas fa-circle text-danger mr-1"></i>#}
+            {#                                                Pending</p>#}
+            {#                                            <h5>$ 973</h5>#}
+            {#                                        </div>#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                            <div class="resize-triggers">#}
+            {#                                <div class="expand-trigger">#}
+            {#                                    <div style="width: 578px; height: 481px;"></div>#}
+            {#                                </div>#}
+            {#                                <div class="contract-trigger"></div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+            {##}
+            {#            <div class="row">#}
+            {#                <div class="col-md-6 col-sm-6">#}
+            {#                    <div class="card">#}
+            {#                        <div class="card-header">#}
+            {#                            <div class="row">#}
+            {#                                <div class="col">#}
+            {#                                    <h5 class="card-title">Recent Invoices</h5>#}
+            {#                                </div>#}
+            {#                                <div class="col-auto">#}
+            {#                                    <a href="invoices.html" class="btn-right btn btn-sm btn-outline-primary">#}
+            {#                                        View All#}
+            {#                                    </a>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                        <div class="card-body">#}
+            {#                            <div class="mb-3">#}
+            {#                                <div class="progress progress-md rounded-pill mb-3">#}
+            {#                                    <div class="progress-bar bg-success" role="progressbar" style="width: 47%"#}
+            {#                                         aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>#}
+            {#                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 28%"#}
+            {#                                         aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>#}
+            {#                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"#}
+            {#                                         aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>#}
+            {#                                    <div class="progress-bar bg-info" role="progressbar" style="width: 10%"#}
+            {#                                         aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>#}
+            {#                                </div>#}
+            {#                                <div class="row">#}
+            {#                                    <div class="col-auto">#}
+            {#                                        <i class="fas fa-circle text-success mr-1"></i> Paid#}
+            {#                                    </div>#}
+            {#                                    <div class="col-auto">#}
+            {#                                        <i class="fas fa-circle text-warning mr-1"></i> Unpaid#}
+            {#                                    </div>#}
+            {#                                    <div class="col-auto">#}
+            {#                                        <i class="fas fa-circle text-danger mr-1"></i> Overdue#}
+            {#                                    </div>#}
+            {#                                    <div class="col-auto">#}
+            {#                                        <i class="fas fa-circle text-info mr-1"></i> Draft#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {##}
+            {#                            <div class="table-responsive">#}
+            {##}
+            {#                                <table class="table table-stripped table-hover">#}
+            {#                                    <thead class="thead-light">#}
+            {#                                    <tr>#}
+            {#                                        <th>Customer</th>#}
+            {#                                        <th>Amount</th>#}
+            {#                                        <th>Due Date</th>#}
+            {#                                        <th>Status</th>#}
+            {#                                        <th class="text-right">Action</th>#}
+            {#                                    </tr>#}
+            {#                                    </thead>#}
+            {#                                    <tbody>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-04.jpg" alt="User Image">Barbara#}
+            {#                                                    Moore</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>$118</td>#}
+            {#                                        <td>23 Nov 2020</td>#}
+            {#                                        <td><span class="badge bg-success-light">Paid</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="view-invoice.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-copy mr-2"></i>Clone Invoice</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-06.jpg" alt="User Image">Karlene#}
+            {#                                                    Chaidez</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>$222</td>#}
+            {#                                        <td>18 Nov 2020</td>#}
+            {#                                        <td><span class="badge bg-info-light">Sent</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="view-invoice.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-copy mr-2"></i>Clone Invoice</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-08.jpg" alt="User Image">Russell#}
+            {#                                                    Copeland</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>$347</td>#}
+            {#                                        <td>10 Nov 2020</td>#}
+            {#                                        <td><span class="badge bg-warning-light">Partially Paid</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="view-invoice.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-copy mr-2"></i>Clone Invoice</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-10.jpg" alt="User Image">Joseph#}
+            {#                                                    Collins</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>$826</td>#}
+            {#                                        <td>25 Sep 2020</td>#}
+            {#                                        <td><span class="badge bg-danger-light">Overdue</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="view-invoice.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-copy mr-2"></i>Clone Invoice</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-11.jpg" alt="User Image">Jennifer#}
+            {#                                                    Floyd</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>$519</td>#}
+            {#                                        <td>18 Sep 2020</td>#}
+            {#                                        <td><span class="badge bg-success-light">Paid</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="view-invoice.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-copy mr-2"></i>Clone Invoice</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    </tbody>#}
+            {#                                </table>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#                <div class="col-md-6 col-sm-6">#}
+            {#                    <div class="card">#}
+            {#                        <div class="card-header">#}
+            {#                            <div class="row">#}
+            {#                                <div class="col">#}
+            {#                                    <h5 class="card-title">Recent Estimates</h5>#}
+            {#                                </div>#}
+            {#                                <div class="col-auto">#}
+            {#                                    <a href="estimates.html" class="btn-right btn btn-sm btn-outline-primary">#}
+            {#                                        View All#}
+            {#                                    </a>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                        <div class="card-body">#}
+            {#                            <div class="mb-3">#}
+            {#                                <div class="progress progress-md rounded-pill mb-3">#}
+            {#                                    <div class="progress-bar bg-success" role="progressbar" style="width: 39%"#}
+            {#                                         aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>#}
+            {#                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 35%"#}
+            {#                                         aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>#}
+            {#                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 26%"#}
+            {#                                         aria-valuenow="26" aria-valuemin="0" aria-valuemax="100"></div>#}
+            {#                                </div>#}
+            {#                                <div class="row">#}
+            {#                                    <div class="col-auto">#}
+            {#                                        <i class="fas fa-circle text-success mr-1"></i> Sent#}
+            {#                                    </div>#}
+            {#                                    <div class="col-auto">#}
+            {#                                        <i class="fas fa-circle text-warning mr-1"></i> Draft#}
+            {#                                    </div>#}
+            {#                                    <div class="col-auto">#}
+            {#                                        <i class="fas fa-circle text-danger mr-1"></i> Expired#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                            <div class="table-responsive">#}
+            {#                                <table class="table table-hover">#}
+            {#                                    <thead class="thead-light">#}
+            {#                                    <tr>#}
+            {#                                        <th>Customer</th>#}
+            {#                                        <th>Expiry Date</th>#}
+            {#                                        <th>Amount</th>#}
+            {#                                        <th>Status</th>#}
+            {#                                        <th class="text-right">Action</th>#}
+            {#                                    </tr>#}
+            {#                                    </thead>#}
+            {#                                    <tbody>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-05.jpg" alt="User Image"> Greg#}
+            {#                                                    Lynch</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>5 Nov 2020</td>#}
+            {#                                        <td>$175</td>#}
+            {#                                        <td><span class="badge bg-info-light">Sent</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="view-estimate.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-file-alt mr-2"></i>Convert to Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Estimate</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as Accepted</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-times-circle mr-2"></i>Mark as Rejected</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-06.jpg" alt="User Image">#}
+            {#                                                    Karlene Chaidez</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>28 Oct 2020</td>#}
+            {#                                        <td>$1500</td>#}
+            {#                                        <td><span class="badge bg-warning-light">Expired</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="view-estimate.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-file-alt mr-2"></i>Convert to Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Estimate</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as Accepted</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-times-circle mr-2"></i>Mark as Rejected</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-07.jpg" alt="User Image"> John#}
+            {#                                                    Blair</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>17 Oct 2020</td>#}
+            {#                                        <td>$2350</td>#}
+            {#                                        <td><span class="badge bg-success-light">Accepted</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="view-estimate.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-file-alt mr-2"></i>Convert to Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Estimate</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as Accepted</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-times-circle mr-2"></i>Mark as Rejected</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-08.jpg" alt="User Image">#}
+            {#                                                    Russell Copeland</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>8 Oct 2020</td>#}
+            {#                                        <td>$1890</td>#}
+            {#                                        <td><span class="badge bg-success-light">Accepted</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="view-estimate.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-file-alt mr-2"></i>Convert to Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Estimate</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as Accepted</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-times-circle mr-2"></i>Mark as Rejected</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    <tr>#}
+            {#                                        <td>#}
+            {#                                            <h2 class="table-avatar">#}
+            {#                                                <a href="profile.html"><img#}
+            {#                                                        class="avatar avatar-sm mr-2 avatar-img rounded-circle"#}
+            {#                                                        src="assets/img/profiles/avatar-09.jpg" alt="User Image"> Leatha#}
+            {#                                                    Bailey</a>#}
+            {#                                            </h2>#}
+            {#                                        </td>#}
+            {#                                        <td>30 Sep 2020</td>#}
+            {#                                        <td>$785</td>#}
+            {#                                        <td><span class="badge bg-success-light">Accepted</span></td>#}
+            {#                                        <td class="text-right">#}
+            {#                                            <div class="dropdown dropdown-action">#}
+            {#                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"#}
+            {#                                                   aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>#}
+            {#                                                <div class="dropdown-menu dropdown-menu-right">#}
+            {#                                                    <a class="dropdown-item" href="edit-invoice.html"><i#}
+            {#                                                            class="far fa-edit mr-2"></i>Edit</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-trash-alt mr-2"></i>Delete</a>#}
+            {#                                                    <a class="dropdown-item" href="view-estimate.html"><i#}
+            {#                                                            class="far fa-eye mr-2"></i>View</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-file-alt mr-2"></i>Convert to Invoice</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as sent</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-paper-plane mr-2"></i>Send Estimate</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-check-circle mr-2"></i>Mark as Accepted</a>#}
+            {#                                                    <a class="dropdown-item" href="javascript:void(0);"><i#}
+            {#                                                            class="far fa-times-circle mr-2"></i>Mark as Rejected</a>#}
+            {#                                                </div>#}
+            {#                                            </div>#}
+            {#                                        </td>#}
+            {#                                    </tr>#}
+            {#                                    </tbody>#}
+            {#                                </table>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+    </div>
+{% endblock %}
