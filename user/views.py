@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from .forms import RegisterForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
@@ -8,54 +7,58 @@ from django.contrib.auth import login, authenticate, logout
 # Create your views here.
 
 def register(request):
-    form = RegisterForm(request.POST or None)
-    if form.is_valid():
-        username    = form.cleaned_data.get("username")
-        lastname = form.cleaned_data.get("lastname")
-        email       = form.cleaned_data.get("email")
-        password    = form.cleaned_data.get("password")
+    if request.method == "POST":
+        username    = request.POST["username"]
+        lastname    = request.POST["lastname"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+        repassword = request.POST["repassword"]
 
+        if password == repassword:
+            if User.objects.filter(username = username).exists():
+                return render(request, 'register.html', {
+                    "error": "bu ad kullaniliyor.",
+                    "username": username,
+                    "emial": email,
+                })
+            else:
+                if User.objects.filter(email = email).exists():
+                    return render(request, 'register.html', {
+                        "error": "bu email kullaniliyor.",
+                        "username": username,
+                        "emial": email,
+                    })
+                else:
+                    user = User.objects.create_user(username=username, last_name=lastname, email=email, password=password)
+                    user.save()
+                    return redirect('login')
+        else:
+            return render(request, 'register.html', {
+                "error": "Parola eslesmiyor.",
+                "username": username,
+                "emial": email,
+            })
 
-
-        newUser = User(username=username, email=email, lastname=lastname)
-        newUser.set_password(password)
-
-
-        newUser.save()
-        login(request, newUser)
-        # messages.info(request, "Başarıyla Kayıt Oldunuz...")
-        return redirect("home")
-    context = {
-        "form": form
-    }
-    return render(request, "register.html", context)
+    return render(request, "register.html")
 
 
 def loginUser(request):
-    form = LoginForm(request.POST or None)
-
-    context = {
-        "form": form
-    }
-
-    if form.is_valid():
-        username = form.cleaned_data.get("username")
-        password = form.cleaned_data.get("password")
-
-        user = authenticate(username=username, password=password)
-
-        if user is None:
-            # messages.info(request, "Kullanıcı Adı veya Parola Hatalı")
-            return render(request, "login.html", context)
-
-        # messages.success(request, "Başarıyla Giriş Yaptınız")
-        login(request, user)
-        return redirect("home")
-    return render(request, "login.html", context)
+    if request.method == "POST":
+        username = request.POST["username"]
+        password = request.POST["password"]
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("home")
+        else:
+            return render(request, "login.html", {
+                "error": "username veya parola yanlis"
+            })
+    else:
+        return render(request, "login.html")
 
 
 def logoutUser(request):
     logout(request)
-    # messages.success(request, "Başarıyla Çıkış Yaptınız")
     return redirect("home")
 
