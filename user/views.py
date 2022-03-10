@@ -15,7 +15,7 @@ def register(request):
         repassword = request.POST["repassword"]
 
         if password == repassword:
-            if User.objects.filter(username = username).exists():
+            if User.objects.filter(username=username).exists():
                 return render(request, 'register.html', {
                     "error": "bu ad kullaniliyor.",
                     "username": username,

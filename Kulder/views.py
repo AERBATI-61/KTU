@@ -27,8 +27,9 @@ from django.http import FileResponse
 import io
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch
-from reportlab.lib.pagesizes import letter
+from reportlab.lib.pagesizes import A3
 
+from .deneme import *
 
 
 def home(request):
@@ -36,6 +37,11 @@ def home(request):
     lessons = Lesson.objects.all()
     supports = Support_for_Students.objects.all()
     activities = Activity.objects.all()
+
+    close_html = html_str.count('</html>')
+    open_html = html_str.count('<html>')
+    close_h1 = html_str.count('</h1>')
+    open_h1 = html_str.count('<h1>')
 
     selected_students = []
     selected_activities = []
@@ -56,7 +62,11 @@ def home(request):
         'selected_activities': selected_activities,
         'lessons': lessons,
         'suppprts': supports,
-        'activities': activities
+        'activities': activities,
+        'close_html': close_html,
+        'open_html': open_html,
+        'close_h1': close_h1,
+        'open_h1': open_h1,
     }
     return render(request, 'home.html', context)
 
@@ -229,7 +239,7 @@ def export_excel(request):
 
 def venue_pdf(request):
     buf = io.BytesIO()
-    c = canvas.Canvas(buf, pagesize=letter, bottomup=0)
+    c = canvas.Canvas(buf, pagesize=A3, bottomup=0)
     textob = c.beginText()
     textob.setTextOrigin(inch, inch)
     textob.setFont("Helvetica", 12)
@@ -252,3 +262,6 @@ def venue_pdf(request):
     buf.seek(0)
 
     return FileResponse(buf, as_attachment=True, filename='kayitli_ogrenciler.pdf')
+
+
+
