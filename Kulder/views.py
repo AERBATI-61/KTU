@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.urls import reverse_lazy
-from easy_pdf.views import PDFTemplateResponseMixin
+# from easy_pdf.views import PDFTemplateResponseMixin
 from django.views.generic import DetailView
 from django.views import View
 from .forms import *
@@ -38,10 +38,11 @@ def home(request):
     supports = Support_for_Students.objects.all()
     activities = Activity.objects.all()
 
-    close_html = html_str.count('</html>')
-    open_html = html_str.count('<html>')
-    close_h1 = html_str.count('</h1>')
-    open_h1 = html_str.count('<h1>')
+    close_html = arafat.count('</html>')
+    open_html = arafat.count('<html>')
+    close_h1 = arafat.count('</h1>')
+    open_h1 = arafat.count('<h1>')
+
 
     selected_students = []
     selected_activities = []
@@ -67,6 +68,7 @@ def home(request):
         'open_html': open_html,
         'close_h1': close_h1,
         'open_h1': open_h1,
+
     }
     return render(request, 'home.html', context)
 

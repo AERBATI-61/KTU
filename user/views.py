@@ -3,13 +3,10 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 
-
-# Create your views here.
-
 def register(request):
     if request.method == "POST":
-        username    = request.POST["username"]
-        lastname    = request.POST["lastname"]
+        username = request.POST["username"]
+        lastname = request.POST["lastname"]
         email = request.POST["email"]
         password = request.POST["password"]
         repassword = request.POST["repassword"]
@@ -19,14 +16,14 @@ def register(request):
                 return render(request, 'register.html', {
                     "error": "bu ad kullaniliyor.",
                     "username": username,
-                    "emial": email,
+                    "email": email,
                 })
             else:
-                if User.objects.filter(email = email).exists():
+                if User.objects.filter(email=email).exists():
                     return render(request, 'register.html', {
                         "error": "bu email kullaniliyor.",
                         "username": username,
-                        "emial": email,
+                        "email": email,
                     })
                 else:
                     user = User.objects.create_user(username=username, last_name=lastname, email=email, password=password)

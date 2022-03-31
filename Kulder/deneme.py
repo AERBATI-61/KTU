@@ -1,4 +1,4 @@
-html_str = """\
+arafat = """\
 <html>
 <html>
 <html>
@@ -15,6 +15,7 @@ html_str = """\
 </html>
 </html><h1> sen var ya adamin dibisin </h1>
 </html><h1></h1> sen var ya adamin dibisin </h1></h1>
+</html>
 </html>
 
 """
