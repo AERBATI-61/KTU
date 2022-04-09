@@ -188,7 +188,7 @@ class Contactview(View):
     def post(self, request, *args, **kwargs):
         form = ContactForm(request.POST or None)
         if form.is_valid():
-            c_form = form.save(commit = False)
+            c_form = form.save(commit=False)
             c_form.save()
             return render(request, 'contact.html', context={'form': ContactForm()})
 
