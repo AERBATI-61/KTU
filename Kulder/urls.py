@@ -10,7 +10,7 @@ urlpatterns = [
     # path('<int:pk>', pdfDetail.as_view(), name='pdf_detail'),
     path('export-csv/', export_csv, name='export-csv'),
     path('export-excel/', export_excel, name='export-excel'),
-    path('venue-pdf/', venue_pdf, name='venue-pdf'),
+    # path('venue-pdf/', venue_pdf, name='venue-pdf'),
 
 
     path('executives/', ExecutivesList.as_view(), name='executives'),

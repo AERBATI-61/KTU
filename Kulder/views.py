@@ -38,10 +38,7 @@ def home(request):
     supports = Support_for_Students.objects.all()
     activities = Activity.objects.all()
 
-    close_html = arafat.count('</html>')
-    open_html = arafat.count('<html>')
-    close_h1 = arafat.count('</h1>')
-    open_h1 = arafat.count('<h1>')
+
 
 
     selected_students = []
@@ -64,10 +61,7 @@ def home(request):
         'lessons': lessons,
         'suppprts': supports,
         'activities': activities,
-        'close_html': close_html,
-        'open_html': open_html,
-        'close_h1': close_h1,
-        'open_h1': open_h1,
+
 
     }
     return render(request, 'home.html', context)
@@ -239,31 +233,31 @@ def export_excel(request):
 
 
 
-def venue_pdf(request):
-    buf = io.BytesIO()
-    c = canvas.Canvas(buf, pagesize=A3, bottomup=0)
-    textob = c.beginText()
-    textob.setTextOrigin(inch, inch)
-    textob.setFont("Helvetica", 12)
-    space = "   "
-    venues = Student.objects.all()
-    lines = []
-    for venue in venues:
-        lines.append(
-                    venue.name + space + venue.phone + space + venue.email
-                    + space + str(venue.university) + space + venue.department
-                    + space + venue.degree_level
-                     )
-        lines.append(" ")
-    for line in lines:
-        textob.textLine(line)
-
-    c.drawText(textob)
-    c.showPage()
-    c.save()
-    buf.seek(0)
-
-    return FileResponse(buf, as_attachment=True, filename='kayitli_ogrenciler.pdf')
+# def venue_pdf(request):
+#     buf = io.BytesIO()
+#     c = canvas.Canvas(buf, pagesize=A3, bottomup=0)
+#     textob = c.beginText()
+#     textob.setTextOrigin(inch, inch)
+#     textob.setFont("Helvetica", 12)
+#     space = "   "
+#     venues = Student.objects.all()
+#     lines = []
+#     for venue in venues:
+#         lines.append(
+#                     venue.name + space + venue.phone + space + venue.email
+#                     + space + str(venue.university) + space + venue.department
+#                     + space + venue.degree_level
+#                      )
+#         lines.append(" ")
+#     for line in lines:
+#         textob.textLine(line)
+#
+#     c.drawText(textob)
+#     c.showPage()
+#     c.save()
+#     buf.seek(0)
+#
+#     return FileResponse(buf, as_attachment=True, filename='kayitli_ogrenciler.pdf')
 
 
 
